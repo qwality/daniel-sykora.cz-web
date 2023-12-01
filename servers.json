@@ -1,0 +1,12 @@
+{
+    "servers": {
+        "test": {
+            "host": 1234,
+            "commands": {
+                "start": "pwd",
+                "update": "echo 'update'",
+                "stop": "echo 'test stop'"
+            }
+        }
+    }
+}
