@@ -5,13 +5,13 @@ from fastapi.staticfiles import StaticFiles
 app = FastAPI()
 '''FastAPI app reference'''
 
-templates = Jinja2Templates(directory='templates')
+templates = Jinja2Templates(directory='uvicorn_fastapi/templates')
 ''' specifies usage of jinja2 templating engine and defines its root directory
     templates'''
 
 app.mount(
     "/static",
-    StaticFiles(directory="static"),
+    StaticFiles(directory="uvicorn_fastapi/static"),
     name="static")
 '''making entire /static directory and all its subdirectories publicaly awiable'''
 
