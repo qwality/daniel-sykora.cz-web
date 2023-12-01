@@ -1,8 +1,6 @@
 const { defineConfig } = require('@vue/cli-service');
 
 module.exports = defineConfig({
-  "transpileDependencies": true,
-  "devServer": {
-    "public": "daniel-sykora.cz",
-  }
+  publicPath: 'https://daniel-sykora.cz/',
+  transpileDependencies: true,
 });
