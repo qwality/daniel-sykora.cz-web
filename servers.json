@@ -20,7 +20,7 @@
         },
         "vue": {
             "commands": {
-                "setup": "npm --prefix ./vue i -D tailwindcss postcss autoprefixer && npx --prefix ./vue tailwindcss init -p && npm --prefix ./vue i -D daisyui@latest",
+                "setup": "yarn install && npm --prefix ./vue i -D tailwindcss postcss autoprefixer && npm --prefix ./vue i -D daisyui@latest",
                 "run": "npm --prefix ./vue run serve -- --port 5000 &",
                 "stop": "kill -9 $(lsof -i:5000 -t)"
             }
