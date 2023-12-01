@@ -8,7 +8,7 @@
         "test": {
             "commands": {
                 "run": "pwd",
-                "stop": "echo 'daniel-sykora.cz/test stopped''"
+                "stop": "echo 'daniel-sykora.cz/test stopped'"
             }
         }
     }
