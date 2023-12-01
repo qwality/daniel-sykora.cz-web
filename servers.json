@@ -13,8 +13,15 @@
         },
         "nodejs": {
             "commands": {
+                "setup": "npm --prefix ./nodejs install express",
                 "run": "node nodejs/app.js &",
                 "stop": "kill -9 $(lsof -i:6000 -t)"
+            }
+        },
+        "uvicorn": {
+            "commands": {
+                "run": "uvicorn uvicorn.main:app --port 8000 &",
+                "stop": "kill -9 $(lsof -i:8000 -t)"
             }
         }
     }
