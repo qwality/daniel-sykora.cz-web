@@ -18,9 +18,9 @@
                 "stop": "kill -9 $(lsof -i:6000 -t)"
             }
         },
-        "uvicorn": {
+        "fastapi": {
             "commands": {
-                "run": "uvicorn uvicorn.main:app --port 8000 &",
+                "run": "uvicorn fastapi.main:app --port 8000 &",
                 "stop": "kill -9 $(lsof -i:8000 -t)"
             }
         }
