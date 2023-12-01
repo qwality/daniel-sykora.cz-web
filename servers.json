@@ -1,11 +1,14 @@
 {
     "servers": {
-        "test": {
-            "host": 1234,
+        "this": {
             "commands": {
-                "start": "pwd",
-                "update": "echo 'update'",
-                "stop": "echo 'test stop'"
+                "update": "git pull"
+            }
+        },
+        "test": {
+            "commands": {
+                "run": "pwd",
+                "stop": "echo 'daniel-sykora.cz/test stopped''"
             }
         }
     }
