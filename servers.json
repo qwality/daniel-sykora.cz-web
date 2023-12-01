@@ -10,6 +10,12 @@
                 "run": "pwd",
                 "stop": "echo 'daniel-sykora.cz/test stopped'"
             }
+        },
+        "nodejs": {
+            "commands": {
+                "run": "node app.js",
+                "stop": "kill -9 $(lsof -i:6000 -t)"
+            }
         }
     }
 }
