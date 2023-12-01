@@ -1,5 +1,6 @@
 <template>
-  <div class="w-full text-center bg-base-300">
+  <div>
+    <div class="w-full text-center bg-base-300">
     <h1 class=" text-6xl p-8 text-primary font-bold">
       Daniel Sykora <span class=" inline-block font-normal text-3xl">Blog Page</span>
     </h1>
@@ -74,6 +75,8 @@
       </ul>
     </div>
   </div>
+  </div>
+  
 </template>
 
 <script>
