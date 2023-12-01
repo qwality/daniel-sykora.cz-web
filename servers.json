@@ -20,7 +20,7 @@
         },
         "uvicorn_fastapi": {
             "commands": {
-                "run": "uvicorn uvicorn_fastapi.main:app --port 8000 --reload &",
+                "run": "uvicorn uvicorn_fastapi.main:app --port 8000 --reload && pwd &",
                 "stop": "kill -9 $(lsof -i:8000 -t)"
             }
         }
