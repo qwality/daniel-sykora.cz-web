@@ -82,7 +82,7 @@
 <script>
 import { ref, onMounted } from 'vue';
 import MarkdownIt from 'markdown-it';
-// import article from '@/article-1.md';
+import article from '@/article-1.md';
 
 export default {
   name: 'App',
@@ -90,8 +90,8 @@ export default {
     const articleHtml = ref('');
 
     onMounted(() => {
-      // const md = new MarkdownIt();
-      // articleHtml.value = md.render(article);
+      const md = new MarkdownIt();
+      articleHtml.value = md.render(article);
     });
 
     return {
