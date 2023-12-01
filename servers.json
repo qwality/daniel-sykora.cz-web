@@ -13,7 +13,7 @@
         },
         "nodejs": {
             "commands": {
-                "run": "node app.js",
+                "run": "node nodejs/app.js",
                 "stop": "kill -9 $(lsof -i:6000 -t)"
             }
         }
