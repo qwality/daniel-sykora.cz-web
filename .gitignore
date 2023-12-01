@@ -1,1 +1,28 @@
+uvicorn_fastapi/__pycache__/# Ignorovat cache Pythonu ve složce FastAPI
 uvicorn_fastapi/__pycache__/
+uvicorn_fastapi/*.py[cod]
+uvicorn_fastapi/*.pyo
+uvicorn_fastapi/*.pyd
+uvicorn_fastapi/*~
+
+# Ignorovat soubory prostředí ve složce FastAPI
+uvicorn_fastapi/.env
+uvicorn_fastapi/.venv
+uvicorn_fastapi/env/
+uvicorn_fastapi/venv/
+uvicorn_fastapi/ENV/
+
+# Ignorovat soubory IDE
+.vscode/
+.idea/
+
+# Ignorovat složky node pro Vue aplikaci
+vue/node_modules/
+
+# Ignorovat soubory logů ve složce FastAPI
+uvicorn_fastapi/logs
+uvicorn_fastapi/*.log
+
+# Ignorovat soubory databáze ve složce FastAPI
+uvicorn_fastapi/*.db
+uvicorn_fastapi/*.sqlite3

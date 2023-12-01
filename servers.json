@@ -5,12 +5,6 @@
                 "update": "git pull"
             }
         },
-        "test": {
-            "commands": {
-                "run": "pwd",
-                "stop": "echo 'daniel-sykora.cz/test stopped'"
-            }
-        },
         "nodejs": {
             "commands": {
                 "setup": "npm --prefix ./nodejs install express",
@@ -22,6 +16,13 @@
             "commands": {
                 "run": "uvicorn uvicorn_fastapi.main:app --host 0.0.0.0 --port 8000 &",
                 "stop": "kill -9 $(lsof -i:8000 -t)"
+            }
+        },
+        "vue": {
+            "commands": {
+                "setup": "npm --prefix ./vue i -D tailwindcss postcss autoprefixer && npx --prefix ./vue tailwindcss init -p && npm --prefix ./vue i -D daisyui@latest",
+                "run": "npm --prefix ./vue run serve -- --port 5000 &",
+                "stop": "kill -9 $(lsof -i:5000 -t)"
             }
         }
     }
