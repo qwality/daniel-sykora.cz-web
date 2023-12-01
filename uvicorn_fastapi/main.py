@@ -17,7 +17,7 @@ app.mount(
 
 @app.get('/')
 async def index(request: Request):
-    return templates.TemplateResponse('main_cv.html', {'request':request})
+    return templates.TemplateResponse('index.html', {'request':request})
 
 @app.head('/')
 async def head(request: Request):
