@@ -10,13 +10,13 @@
       <div class="drawer-content flex flex-col">
         <!-- Navbar -->
         <div class="flex w-full px-16 navbar bg-base-200">
-          <div class="flex-none lg:hidden">
+          <div class="flex-none lg:hidden mr-4">
             <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost">
               <haburger_icon />
             </label>
           </div> 
           <div class="flex-1">
-            <h1 class=" text-xl px-8 text-secondary">
+            <h1 class=" text-xl text-secondary">
               Featuring
             </h1>
           </div>

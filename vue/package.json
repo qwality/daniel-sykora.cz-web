@@ -10,6 +10,7 @@
     "core-js": "^3.8.3",
     "markdown-it": "^13.0.2",
     "vue": "^3.2.13",
+    "vue-resizable": "^2.1.7",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {

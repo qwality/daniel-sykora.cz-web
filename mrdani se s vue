@@ -1,1 +1,2 @@
-yarn install --production 
+yarn install --production
+odinstaluj vue-resizable
