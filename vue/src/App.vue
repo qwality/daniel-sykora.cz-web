@@ -17,7 +17,7 @@
           </div> 
           <div class="flex-1">
             <h1 class=" text-xl text-secondary">
-              Featuring
+              {{ currentComponentName }}
             </h1>
           </div>
           <div class="flex-none hidden lg:inline-flex gap-4">
@@ -31,7 +31,7 @@
         </div>
         
         <div class="card mx-16 my-4 bg-neutral shadow-xl">
-          <div class="card-body">
+          <div class="card-body" ref="content">
             <router-view/>
           </div>
         </div>
@@ -58,7 +58,8 @@
 
 <script>
 
-
+import { useRoute } from 'vue-router';
+import { ref, onMounted, getCurrentInstance, computed } from 'vue';
 
 import searchbar from './components/searchbar.vue';
 import haburger_icon from './components/haburger_icon.vue';
@@ -69,7 +70,7 @@ export default {
     searchbar, haburger_icon
   },
   setup() {
-    
+    const route = useRoute()
 
     const menu_items = {
       'Home': '/',
@@ -79,10 +80,20 @@ export default {
       'Admin': '/admin'
     }
 
-    
+    onMounted(() => {
+    })
+
+    const currentComponentName = computed(() => {
+      if (route.matched.length > 0) {
+        const routeRecord = route.matched[0];
+        const component = routeRecord.components.default;
+        return component.name || 'UnnamedComponent';
+      }
+      return 'NoComponent';
+    })
 
     return {
-      menu_items
+      menu_items,  currentComponentName
     }
   }
 }

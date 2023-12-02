@@ -105,7 +105,7 @@
 import VueResizable from 'vue-resizable';
 
 export default {
-  name: 'zivotopis',
+  name: 'Zivotopis',
   components: {
     VueResizable
   }

@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'sbirka_znalosti',
+    name: 'Sbirka znalosti',
 }
 </script>
 

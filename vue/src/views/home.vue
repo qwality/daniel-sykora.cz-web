@@ -1,6 +1,10 @@
 <template>
   <div>
-    <p class="markdown-body" v-html="articleHtml"></p>
+    <div class="card shadow-xl bg-base-100 max-w-4xl mx-auto">
+      <div class="card-body">
+        <div class="markdown-body" v-html="articleHtml"></div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -10,7 +14,7 @@ import MarkdownIt from 'markdown-it';
 import article from '@/article-1.md';
 
 export default {
-  name: 'home',
+  name: 'Home',
   setup(){
 
     const articleHtml = ref('')
