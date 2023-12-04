@@ -1,85 +1,113 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+  <div class="app">
+    <!-- header -->
+    <div class="w-full text-center bg-base-300">
+      <h1 class=" text-6xl p-8 text-primary font-bold">
+        Daniel Sykora <span class=" inline-block font-normal text-3xl">Blog Page</span>
+      </h1>
     </div>
-  </header>
+    <div class="drawer">
+      <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> <!-- daisyui hidden toggle to controll side drawer -->
+      <div class="drawer-content flex flex-col">
+        <!-- navbar -->
+        <div class="flex w-full md:px-16 navbar bg-base-200">
+          <div class="flex-none lg:hidden mr-4">
+            <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost">
+              <hamburger_icon />
+            </label>
+          </div> 
+          <div class="flex-1">
+            <h1 class=" text-xl text-secondary">
+              {{ currentComponentName }}
+            </h1>
+          </div>
+          <div class="flex-none hidden lg:inline-flex gap-4">
+            <ul class="join">
+              <li v-for="[key, item] in Object.entries(menu_items)" :key="item">
+                <router-link class="btn join-item" :to="item">{{ key }}</router-link>
+              </li>
+            </ul>
+            <searchbar />
+          </div>
+        </div>
+        
+        <!-- main content -->
+        <div class="card md:mx-16 my-4 bg-neutral shadow-xl">
+          <div class="card-body p-2 md:p-8" ref="content">
+            <router-view/>
+          </div>
+        </div>
+      </div> 
 
-  <RouterView />
+      <!-- sidebar -->
+      <div class="drawer-side">
+        <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label> 
+        
+        <div class="p-4 min-h-full bg-base-200 flex flex-col gap-4">
+          <label for="my-drawer-3" aria-label="close sidebar" class="btn btn-square btn-ghost self-end">
+            <cross_icon />
+          </label>
+          <searchbar />
+          <div class=" join join-vertical">
+            <label @click="e => router.push(item)" v-for="[key, item] in Object.entries(menu_items)" :key="item" for="my-drawer-3" class="btn join-item">
+              {{ key }}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
+<script>
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+import { useRoute, useRouter } from 'vue-router';
+import { ref, onMounted, getCurrentInstance, computed } from 'vue';
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
+import searchbar from './components/searchbar.vue';
+import hamburger_icon from './components/hamburger_icon.vue';
+import cross_icon from './components/cross_icon.vue';
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
+export default {
+  name: 'App',
+  components: {
+    searchbar, hamburger_icon, cross_icon
+  },
+  setup() {
+    const route = useRoute()
+    const router = useRouter()
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
+    // by se klidne mohlo importovat z router/index.js
+    const menu_items = {
+      'Home': '/',
+      'Zivotopis': '/zivotopis',
+      'This project': '/this-project',
+      'Sbirka znalosti': '/sbirka-znalosti',
+      'Admin': '/admin'
+    }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
+    onMounted(() => {
+    })
 
-nav a:first-of-type {
-  border: 0;
-}
+    const currentComponentName = computed(() => {
+      if (route.matched.length > 0) {
+        const routeRecord = route.matched[0];
+        const component = routeRecord.components.default;
+        return component.name || 'UnnamedComponent';
+      }
+      return 'NoComponent';
+    })
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    return {
+      menu_items,  currentComponentName, router
+    }
   }
+}
+</script>
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+<style>
+.markdown-body {
+  @apply bg-transparent text-current;
 }
 </style>
