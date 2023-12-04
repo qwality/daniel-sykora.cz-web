@@ -7,6 +7,9 @@ from fastapi.middleware.cors import CORSMiddleware
 
 import os
 
+app = FastAPI()
+'''FastAPI app reference'''
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -17,9 +20,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-app = FastAPI()
-'''FastAPI app reference'''
 
 templates = Jinja2Templates(directory='uvicorn_fastapi/templates')
 ''' specifies usage of jinja2 templating engine and defines its root directory
