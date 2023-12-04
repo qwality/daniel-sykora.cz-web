@@ -28,7 +28,7 @@ async def head(request: Request):
 @app.get('/article/{id}')
 async def article(request: Request, id: int):
     '''article endpoint'''
-    return FileResponse(f'articles/article-{id}.md')
+    return FileResponse(f'uvicorn_fastapi/articles/article-{id}.md')
 
 @app.get('/test')
 async def test_end_point(request: Request):
