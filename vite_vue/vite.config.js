@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  base: process.env.NODE_ENV === 'production' ? '/vite_vue/dist/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/vite/dist/' : '/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
