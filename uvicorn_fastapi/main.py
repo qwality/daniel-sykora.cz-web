@@ -7,6 +7,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 import os
 
+dev = True
+
 app = FastAPI()
 '''FastAPI app reference'''
 
@@ -15,7 +17,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:8080",  # Vývojový server
         "https://daniel-sykora.cz",  # Produkční server
-    ],
+    ] if not dev else ["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

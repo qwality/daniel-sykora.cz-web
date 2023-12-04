@@ -1,8 +1,14 @@
 <template>
-  <div>
+  <div class="flex gap-4 flex-wrap">
     <div class="card shadow-xl bg-base-100 max-w-4xl mx-auto">
       <div class="card-body">
-        <div class="markdown-body" v-html="articleHtml"></div>
+        <div class="markdown-body" v-html="article_1"></div>
+      </div>
+    </div>
+    
+    <div class="card shadow-xl bg-base-100 max-w-4xl mx-auto">
+      <div class="card-body">
+        <div class="markdown-body" v-html="article_2"></div>
       </div>
     </div>
   </div>
@@ -11,7 +17,6 @@
 <script>
 import { ref, onMounted } from 'vue';
 import MarkdownIt from 'markdown-it';
-import article from '@/article-1.md';
 
 import axios from 'axios';
 
@@ -19,7 +24,8 @@ export default {
   name: 'Home',
   setup(){
 
-    const articleHtml = ref('')
+    const article_1 = ref('')
+    const article_2 = ref('')
 
     async function fetch_article(id){
       try {
@@ -34,13 +40,18 @@ export default {
     onMounted(() => {
       // const md = new MarkdownIt()
       // articleHtml.value = md.render(article)
-      fetch_article(1).then((data) => {
-        articleHtml.value = data
-      })
+      fetch_article(1)
+        .then((data) => {
+          article_1.value = data
+        })
+      fetch_article(2)
+        .then((data) => {
+          article_2.value = data
+        })
     })
 
     return{
-      articleHtml
+      article_1, article_2
     }
   }
 }

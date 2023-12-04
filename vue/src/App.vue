@@ -1,18 +1,19 @@
 <template>
   <div class="app">
+    <!-- header -->
     <div class="w-full text-center bg-base-300">
       <h1 class=" text-6xl p-8 text-primary font-bold">
         Daniel Sykora <span class=" inline-block font-normal text-3xl">Blog Page</span>
       </h1>
     </div>
     <div class="drawer">
-      <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> 
+      <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> <!-- daisyui hidden toggle to controll side drawer -->
       <div class="drawer-content flex flex-col">
-        <!-- Navbar -->
-        <div class="flex w-full px-16 navbar bg-base-200">
+        <!-- navbar -->
+        <div class="flex w-full md:px-16 navbar bg-base-200">
           <div class="flex-none lg:hidden mr-4">
             <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost">
-              <haburger_icon />
+              <hamburger_icon />
             </label>
           </div> 
           <div class="flex-1">
@@ -30,26 +31,29 @@
           </div>
         </div>
         
-        <div class="card mx-16 my-4 bg-neutral shadow-xl">
+        <!-- main content -->
+        <div class="card md:mx-16 my-4 bg-neutral shadow-xl">
           <div class="card-body" ref="content">
             <router-view/>
           </div>
         </div>
-        
       </div> 
+
+      <!-- sidebar -->
       <div class="drawer-side">
         <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label> 
-        <ul class="menu p-4 min-h-full bg-base-200 join join-vertical">
-          <!-- Sidebar content here -->
-          <li class=" lg:hidden">
-            <label for="my-drawer-3" aria-label="close sidebar" class="btn join-item">
-              hide
+        
+        <div class="p-4 min-h-full bg-base-200 flex flex-col gap-4">
+          <label for="my-drawer-3" aria-label="close sidebar" class="btn btn-square btn-ghost self-end">
+            <cross_icon />
+          </label>
+          <searchbar />
+          <div class=" join join-vertical">
+            <label @click="e => router.push(item)" v-for="[key, item] in Object.entries(menu_items)" :key="item" for="my-drawer-3" class="btn join-item">
+              {{ key }}
             </label>
-          </li>
-          <li v-for="item in menu_items" :key="item">
-            <router-link class="btn join-item" :to="item">{{ item }}</router-link>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -58,19 +62,21 @@
 
 <script>
 
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { ref, onMounted, getCurrentInstance, computed } from 'vue';
 
 import searchbar from './components/searchbar.vue';
-import haburger_icon from './components/haburger_icon.vue';
+import hamburger_icon from './components/hamburger_icon.vue';
+import cross_icon from './components/cross_icon.vue';
 
 export default {
   name: 'App',
   components: {
-    searchbar, haburger_icon
+    searchbar, hamburger_icon, cross_icon
   },
   setup() {
     const route = useRoute()
+    const router = useRouter()
 
     const menu_items = {
       'Home': '/',
@@ -93,7 +99,7 @@ export default {
     })
 
     return {
-      menu_items,  currentComponentName
+      menu_items,  currentComponentName, router
     }
   }
 }
