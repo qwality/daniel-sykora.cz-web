@@ -2,6 +2,7 @@ from fastapi import FastAPI, Request, Response, status
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
+from fastapi.exceptions import HTTPException
 
 import os
 
