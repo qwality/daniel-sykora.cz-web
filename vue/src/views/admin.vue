@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-[1fr_auto] gap-8">
+  <div class="grid md:grid-cols-[1fr_auto] gap-8">
     <div class="card shadow-xl bg-base-100 max-w-[18rem] m-auto">
       <div class="card-body">
         <h2 class="card-title text-secondary">K cemu tu je admin?</h2>

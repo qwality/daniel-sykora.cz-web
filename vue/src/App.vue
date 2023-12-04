@@ -33,7 +33,7 @@
         
         <!-- main content -->
         <div class="card md:mx-16 my-4 bg-neutral shadow-xl">
-          <div class="card-body" ref="content">
+          <div class="card-body p-2 md:p-8" ref="content">
             <router-view/>
           </div>
         </div>
@@ -78,6 +78,7 @@ export default {
     const route = useRoute()
     const router = useRouter()
 
+    // by se klidne mohlo importovat z router/index.js
     const menu_items = {
       'Home': '/',
       'Zivotopis': '/zivotopis',

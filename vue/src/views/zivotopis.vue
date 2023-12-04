@@ -1,10 +1,10 @@
 <template>
-  <div class="flex flex-row flex-wrap gap-4 max-w-4xl mx-auto">
+  <div class="flex flex-row flex-wrap gap-4 max-w-full mx-auto">
     <!-- Nadpis -->
     <div class="card shadow-xl bg-base-200 min-w-full hover:opacity-90">
       <div class="card-body">
-        <h2 class="card-title">Zivotopis:</h2>
-        <h1 class=" text-[clamp(1rem,9vw,8rem)] text-primary text-center pb-9">Daniel Sykora</h1>
+        <h2 class="card-title md:absolute">Zivotopis:</h2>
+        <h1 class=" text-[clamp(1rem,9vw,8rem)] text-primary text-center">Daniel Sykora</h1>
       </div>
     </div>
     <!-- Hledam praci -->
@@ -49,9 +49,10 @@
     <div class="small-card">
       <div class="card-body">
         <h2 class="card-title text-secondary">Vzdelani:</h2>
-        <div class="grid grid-cols-[min-content_max-content] gap-x-4 gap-y-2">
-          <b class="whitespace-nowrap">Střední průmyslová</b> obor technické lyceum
-          <b class="whitespace-nowrap">VSB-TU Ostrava</b>     nedokončené
+        <div class="">
+          <div class="flex justify-between gap-4"><b class="">Střední průmyslová </b> <span>obor technické lyceum</span></div>
+          <div class="divider my-0"></div> 
+          <div class="flex justify-between gap-4"><b class="">VSB-TU Ostrava     </b> <span>nedokončené</span></div>
         </div>
       </div>
     </div>

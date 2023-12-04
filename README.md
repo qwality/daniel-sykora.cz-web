@@ -1,0 +1,3 @@
+"""
+Popis tohoto projektu.
+"""
