@@ -115,7 +115,7 @@ export default {
 
 <style>
 .small-card{
-    @apply card shadow-xl bg-base-100 shrink self-start hover:opacity-90;
+    @apply card shadow-xl bg-base-100 shrink grow self-start hover:opacity-90;
 }
 .large-card{
     @apply card shadow-xl bg-base-100 basis-1/2 grow hover:opacity-90;

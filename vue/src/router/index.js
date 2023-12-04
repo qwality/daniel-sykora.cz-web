@@ -2,6 +2,11 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
+    path: '/search',
+    name: 'search',
+    component: () => import('../views/search_result.vue')
+  },
+  {
     path: '/',
     name: 'home',
     component: () => import('../views/home.vue')

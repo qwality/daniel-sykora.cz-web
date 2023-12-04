@@ -1,7 +1,7 @@
 <template>
     <div class="join">
-        <input type="text" placeholder="Search..." class=" join-item input input-bordered max-w-xs" />
-        <button class="btn btn-outline btn-secondary join-item">
+        <input v-model="searchQuery" type="text" placeholder="Search..." class=" join-item input input-bordered max-w-xs" />
+        <button class="btn btn-outline btn-secondary join-item" @click="e => router.push({name: 'search', query: {search: searchQuery}})" >
         <svg 
             xmlns="http://www.w3.org/2000/svg" 
             width="24" 
@@ -21,10 +21,16 @@
 </template>
 
 <script>
+
+import { useRouter } from 'vue-router';
+
 export default {
   name: 'searchbar',
   setup() {
+
+    const router = useRouter()
     return {
+      router
     }
   }
 }
