@@ -42,6 +42,14 @@ async def head(request: Request):
     '''only here to allow HTTP head request'''
     return None
 
+@app.get('/article/readme')
+async def readme(request: Request, id: int):
+    '''README endpoint'''
+    file_path = f'README.md'
+    if not os.path.isfile(file_path):
+        raise HTTPException(status_code=404, detail=f"README.md not found")
+    return FileResponse(file_path)
+
 @app.get('/article/{id}')
 async def article(request: Request, id: int):
     '''Article endpoint'''

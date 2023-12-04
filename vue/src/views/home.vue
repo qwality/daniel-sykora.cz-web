@@ -5,7 +5,7 @@
         <div class="markdown-body" v-html="article_1"></div>
       </div>
     </div>
-    
+
     <div class="card shadow-xl bg-base-100 max-w-4xl mx-auto">
       <div class="card-body">
         <div class="markdown-body" v-html="article_2"></div>
@@ -40,7 +40,7 @@ export default {
     onMounted(() => {
       // const md = new MarkdownIt()
       // articleHtml.value = md.render(article)
-      fetch_article(1)
+      fetch_article('readme')
         .then((data) => {
           article_1.value = data
         })
