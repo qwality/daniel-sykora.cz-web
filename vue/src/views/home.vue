@@ -13,15 +13,30 @@ import { ref, onMounted } from 'vue';
 import MarkdownIt from 'markdown-it';
 import article from '@/article-1.md';
 
+import axios from 'axios';
+
 export default {
   name: 'Home',
   setup(){
 
     const articleHtml = ref('')
 
+    async function fetch_article(id){
+      try {
+        const response = await axios.get(`https://daniel-sykora.cz/uvicorn/article/${id}`)
+        console.log(response.data)
+        return MarkdownIt().render(response.data)
+      } catch (error) {
+        console.error(error)
+      }
+    }
+
     onMounted(() => {
-      const md = new MarkdownIt()
-      articleHtml.value = md.render(article)
+      // const md = new MarkdownIt()
+      // articleHtml.value = md.render(article)
+      fetch_article(1).then((data) => {
+        articleHtml.value = data
+      })
     })
 
     return{
