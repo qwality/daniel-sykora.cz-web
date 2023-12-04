@@ -7,34 +7,34 @@ const routes = [
     component: () => import('../views/search_result.vue')
   },
   {
-    path: '/',
+    path: '/app/',
     name: 'home',
     component: () => import('../views/home.vue')
   },
   {
-    path: '/this-project',
+    path: '/app/this-project',
     name: 'this_project',
     component: () => import('../views/this_project.vue')
   },
   {
-    path: '/admin',
+    path: '/app/admin',
     name: 'admin',
     component: () => import('../views/admin.vue')
   },
   {
-    path: '/zivotopis',
+    path: '/app/zivotopis',
     name: 'zivotopis',
     component: () => import('../views/zivotopis.vue')
   },
   {
-    path: '/sbirka-znalosti',
+    path: '/app/sbirka-znalosti',
     name: 'sbirka_znalosti',
     component: () => import('../views/sbirka_znalosti.vue')
   }
 ];
 
 const router = createRouter({
-  base: process.env.NODE_ENV === 'production' ? '/app/' : '/',
+  // base: process.env.NODE_ENV === 'production' ? '/app/' : '/app/',
   history: createWebHistory(),
   routes
 });

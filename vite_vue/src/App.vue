@@ -80,11 +80,11 @@ export default {
 
     // by se klidne mohlo importovat z router/index.js
     const menu_items = {
-      'Home': '/',
-      'Zivotopis': '/zivotopis',
-      'This project': '/this-project',
-      'Sbirka znalosti': '/sbirka-znalosti',
-      'Admin': '/admin'
+      'Home': '/app/',
+      'Zivotopis': '/app/zivotopis',
+      'This project': '/app/this-project',
+      'Sbirka znalosti': '/app/sbirka-znalosti',
+      'Admin': '/app/admin'
     }
 
     onMounted(() => {
