@@ -51,9 +51,9 @@ async def head(request: Request):
 #     return FileResponse(file_path)
 
 @app.get('/article/{id}')
-async def article(request: Request, id: int | str):
+async def article(request: Request, id: str):
     '''Article endpoint'''
-    file_path = f'uvicorn_fastapi/articles/article-{id}.md' if isinstance(id, int) else f'{id}.md'
+    file_path = f'uvicorn_fastapi/articles/article-{int(id)}.md' if id.isdigit() else f'{id}.md'
     if not os.path.isfile(file_path):
         raise HTTPException(status_code=404, detail=f"Article {id} not found")
     return FileResponse(file_path)
