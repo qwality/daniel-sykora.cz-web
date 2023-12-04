@@ -3,6 +3,8 @@ from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
+import os
+
 app = FastAPI()
 '''FastAPI app reference'''
 
@@ -27,11 +29,11 @@ async def head(request: Request):
 
 @app.get('/article/{id}')
 async def article(request: Request, id: int):
-    '''article endpoint'''
-    try:
-        return FileResponse(f'uvicorn_fastapi/articles/article-{id}.md')
-    except FileNotFoundError:
-        return Response(status_code=404, detail=f'Article {id} not found')
+    '''Article endpoint'''
+    file_path = f'uvicorn_fastapi/articles/article-{id}.md'
+    if not os.path.isfile(file_path):
+        raise HTTPException(status_code=404, detail=f"Article {id} not found")
+    return FileResponse(file_path)
 
 @app.get('/test')
 async def test_end_point(request: Request):
