@@ -40,7 +40,7 @@ export default {
     onMounted(() => {
       // const md = new MarkdownIt()
       // articleHtml.value = md.render(article)
-      fetch_article('readme')
+      fetch_article('README')
         .then((data) => {
           article_1.value = data
         })
