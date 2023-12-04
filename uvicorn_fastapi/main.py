@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Request, Response, status
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 app = FastAPI()
 '''FastAPI app reference'''
@@ -23,6 +24,11 @@ async def index(request: Request):
 async def head(request: Request):
     '''only here to allow HTTP head request'''
     return None
+
+@app.get('/article/{id}')
+async def article(request: Request, id: int):
+    '''article endpoint'''
+    return FileResponse(f'/articles/article-{id}.md')
 
 @app.get('/test')
 async def test_end_point(request: Request):
