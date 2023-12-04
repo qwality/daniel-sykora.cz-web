@@ -1,7 +1,7 @@
 <template>
     <div class="join">
         <input v-model="searchQuery" type="text" placeholder="Search..." class=" join-item input input-bordered max-w-xs" />
-        <button class="btn btn-outline btn-secondary join-item" @click="e => router.push({name: 'search', query: {search: searchQuery}})" >
+        <button class="btn btn-outline btn-secondary join-item" @click="e => router.push({name: '/app/search', query: {search: searchQuery}})" >
         <svg 
             xmlns="http://www.w3.org/2000/svg" 
             width="24" 
