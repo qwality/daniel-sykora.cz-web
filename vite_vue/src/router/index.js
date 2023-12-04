@@ -34,6 +34,7 @@ const routes = [
 ];
 
 const router = createRouter({
+  base: process.env.NODE_ENV === 'production' ? '/app/' : '/',
   history: createWebHistory(),
   routes
 });
