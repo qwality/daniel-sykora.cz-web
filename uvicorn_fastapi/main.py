@@ -28,7 +28,10 @@ async def head(request: Request):
 @app.get('/article/{id}')
 async def article(request: Request, id: int):
     '''article endpoint'''
-    return FileResponse(f'uvicorn_fastapi/articles/article-{id}.md')
+    try:
+        return FileResponse(f'uvicorn_fastapi/articles/article-{id}.md')
+    except FileNotFoundError:
+        return Response(status_code=404, detail=f'Article {id} not found')
 
 @app.get('/test')
 async def test_end_point(request: Request):
