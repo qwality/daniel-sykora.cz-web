@@ -18,11 +18,10 @@
                 "stop": "kill -9 $(lsof -i:8000 -t)"
             }
         },
-        "vue": {
+        "vite": {
             "commands": {
-                "setup": "yarn install && npm --prefix ./vue i -D tailwindcss postcss autoprefixer && npm --prefix ./vue i -D daisyui@latest",
-                "run": "npm --prefix ./vue install --production && echo 'npm --prefix installed\n' && yarn --cwd ./vue install && echo 'yarn installed\n' && npm --prefix ./vue run build -- --port 5000 &",
-                "stop": "kill -9 $(lsof -i:5000 -t)"
+                "run": "npm --prefix ./vite_vue i && npm --prefix ./vite_vue run build &",
+                "stop": "echo 'no stop command'"
             }
         }
     }
