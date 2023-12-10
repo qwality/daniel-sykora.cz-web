@@ -53,7 +53,7 @@ export default {
 
 <style scoped>
 .grid-card-layout{
-  @apply flex m-auto justify-center;
+  @apply flex gap-4 m-auto justify-center;
 }
 .grid-small-card{
   @apply card shadow-xl bg-base-100 hover:opacity-90 min-w-min max-w-max;
