@@ -1,5 +1,6 @@
 <template>
-  <div class="grid md:grid-cols-[1fr_auto] gap-8">
+  <div class="grid md:grid-cols-[1fr_auto] gap-8 h-full items-center">
+    <!-- info card -->
     <div class="card shadow-xl bg-base-100 max-w-[18rem] m-auto">
       <div class="card-body">
         <h2 class="card-title text-secondary">K cemu tu je admin?</h2>
@@ -8,6 +9,7 @@
         </p>
       </div>
     </div>
+    <!-- login form -->
     <div class="card shadow-xl bg-base-200 min-w-fit">
       <div class="card-body items-center">
           <h2 class="card-title text-primary">Login to admin:</h2>
