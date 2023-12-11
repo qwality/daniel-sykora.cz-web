@@ -47,12 +47,12 @@
       <div class="card-body">
         <h2 class="card-title text-secondary">Technologie:</h2>
         <div class="grid grid-cols-[min-content_min-content] gap-x-8 gap-y-2">
-          <span class="flex flex-nowrap">python     <img class=" ml-2 w-4 h-4 self-center" src="/img/python.png"> </span>
-          <span class="flex flex-nowrap">javascript <img class=" ml-2 w-4 h-4 self-center" src="/img/javascript.png"></span>
-          <span class="flex flex-nowrap">HTML       <img class=" ml-2 w-4 h-4 self-center" src="/img/html.png"></span>
-          <span class="flex flex-nowrap"><i>CSS </i><img class=" ml-2 w-4 h-4 self-center" src="/img/css.png"></span>
+          <span class="flex flex-nowrap">python     <img class=" ml-2 w-4 h-4 self-center" src="/img/python.svg"> </span>
+          <span class="flex flex-nowrap">javascript <img class=" ml-2 w-4 h-4 self-center" src="/img/js.svg"></span>
+          <span class="flex flex-nowrap">HTML       <img class=" ml-2 w-4 h-4 self-center" src="/img/html.svg"></span>
+          <span class="flex flex-nowrap"><i>CSS </i><img class=" ml-2 w-4 h-4 self-center" src="/img/css.svg"></span>
           <span class="flex flex-nowrap">FastAPI    <img class=" ml-2 w-4 h-4 self-center" src="/img/fastapi.svg"></span>
-          <span class="flex flex-nowrap">Vue        <img class=" ml-2 w-4 h-4 self-center" src="/img/vue.png"></span>
+          <span class="flex flex-nowrap">Vue        <img class=" ml-2 w-4 h-4 self-center" src="/img/vue.svg"></span>
         </div>
       </div>
     </div>
