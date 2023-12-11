@@ -10,24 +10,33 @@
       <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> <!-- daisyui hidden toggle to controll side drawer -->
       <div class="drawer-content flex flex-col">
         <!-- navbar -->
-        <div class="flex w-full md:px-16 navbar bg-base-200">
+        <div class="flex w-full md:px-16 navbar p-0 bg-base-200">
+          <!-- hamburger icon -->
           <div class="flex-none lg:hidden mr-4">
             <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost">
               <hamburger_icon />
             </label>
-          </div> 
+          </div>
+          <!-- current page name -->
           <div class="flex-1">
             <h1 class=" text-xl text-secondary">
               {{ currentComponentName }}
             </h1>
           </div>
-          <div class="flex-none hidden lg:inline-flex gap-4">
-            <ul class="join">
-              <li v-for="[key, item] in Object.entries(menu_items)" :key="item">
-                <router-link class="btn join-item" :to="item">{{ key }}</router-link>
-              </li>
-            </ul>
-            <searchbar />
+          <!-- menu -->
+          <div class="flex-none hidden lg:inline-flex gap-4 h-full">
+            <div role="tablist" class="tabs tabs-lifted tabs-lg self-end">
+              <div
+                @click="e => router.push(item)"
+                v-for="[key, item] in Object.entries(menu_items)"
+                :key="item"
+                role="tab"
+                :class="`tab ${ currentComponentName === key ? 'tab-active' : '' } hover:bg-base-100`"
+              >
+                {{ key }}
+              </div>
+            </div>
+            <searchbar class=" self-center"/>
           </div>
         </div>
         

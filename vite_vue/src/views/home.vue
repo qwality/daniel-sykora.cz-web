@@ -30,7 +30,7 @@ export default {
     async function fetch_article(id){
       try {
         const response = await axios.get(`https://daniel-sykora.cz/uvicorn/article/${id}`)
-        console.log(response.data)
+        // console.log(response.data)
         return MarkdownIt().render(response.data)
       } catch (error) {
         console.error(error)
@@ -38,17 +38,27 @@ export default {
     }
 
     onMounted(() => {
-      // const md = new MarkdownIt()
-      // articleHtml.value = md.render(article)
-      fetch_article('README')
-        .then((data) => {
-          article_1.value = data
-        })
-      fetch_article(2)
-        .then((data) => {
-          article_2.value = data
-        })
-    })
+      const localArticle1 = localStorage.getItem('article_1');
+      const localArticle2 = localStorage.getItem('article_2');
+
+      if(localArticle1) {
+        article_1.value = localArticle1;
+      } else {
+        fetch_article('README').then((data) => {
+          article_1.value = data;
+          localStorage.setItem('article_1', data);
+        });
+      }
+
+      if(localArticle2){
+        article_2.value = localArticle2;
+      } else {
+        fetch_article(2).then((data) => {
+          article_2.value = data;
+          localStorage.setItem('article_2', data);
+        });
+      }
+    });
 
     return{
       article_1, article_2

@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'this.project',
+  name: 'This project',
   // Your script logic here
 }
 </script>
