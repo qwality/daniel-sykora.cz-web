@@ -106,7 +106,7 @@ export default {
       'Home': '/app/',
       'Zivotopis': '/app/zivotopis',
       'This project': '/app/this-project',
-      'Sbirka znalosti': '/app/sbirka-znalosti',
+      'Technologie': '/app/technologie',
       'Admin': '/app/admin'
     }
 

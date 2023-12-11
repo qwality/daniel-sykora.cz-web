@@ -27,9 +27,9 @@ const routes = [
     component: () => import('../views/zivotopis.vue')
   },
   {
-    path: '/app/sbirka-znalosti',
-    name: 'sbirka_znalosti',
-    component: () => import('../views/sbirka_znalosti.vue')
+    path: '/app/technologie',
+    name: 'technologie',
+    component: () => import('../views/technologie.vue')
   }
 ];
 
