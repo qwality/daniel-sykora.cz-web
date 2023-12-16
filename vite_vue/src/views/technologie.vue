@@ -20,159 +20,116 @@
       </div>
     </div>
     <div class="flex-card-layout">
-      <!-- python -->
-      <div class="flex-small-card !bg-success">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">Python</h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/python.svg">
-        </div>
-      </div>
-      <!-- FastAPI -->
-      <div class="flex-small-card !bg-info">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">FastAPI</h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/fastapi.svg">
-        </div>
-      </div>
-      <!-- javascript -->
-      <div class="flex-small-card !bg-info">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">JavaScript</h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/js.svg">
-        </div>
-      </div>
-      <!-- Vue -->
-      <div class="flex-small-card !bg-info">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">Vue</h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/vue.svg">
-        </div>
-      </div>
-      <!-- HTML -->
-      <div class="flex-small-card !bg-info">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">HTML</h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/html.svg">
-        </div>
-      </div>
-      <!-- CSS -->
-      <div class="flex-small-card !bg-info">
-        <div class="card-body">
-          <h2 class="card-title text-base-300"><i>CSS </i></h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/css.svg">
-        </div>
-      </div>
-      <!-- tailwindcss -->
-      <div class="flex-small-card !bg-warning ">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">tailwindcss</h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/tailwindcss.svg">
-        </div>
-      </div>
-      <!-- JWT -->
-      <div class="flex-small-card !bg-error ">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">JWT</h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/jwt.svg">
-        </div>
-      </div>
-      <!-- icons8 -->
-      <div class="flex-small-card !bg-warning ">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">icons8</h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/icons8.svg">
-        </div>
-      </div>
-      <!-- elixir -->
-      <div class="flex-small-card !bg-error ">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">elixir</h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/elixir.svg">
-        </div>
-      </div>
-      <!-- svelte -->
-      <div class="flex-small-card !bg-error ">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">svelte</h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/svelte.svg">
-        </div>
-      </div>
-      <!-- phoenix -->
-      <div class="flex-small-card !bg-error ">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">phoenix</h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/phoenix.svg">
-        </div>
-      </div>
-      <!-- alpinejs -->
-      <div class="flex-small-card !bg-error ">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">alpinejs</h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/alpinejs.svg">
-        </div>
-      </div>
-      <!-- htmx -->
-      <div class="flex-small-card !bg-error ">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">htmx</h2>
-          <span class=" font-bold text-white text-xl">&lt;<span class=" text-blue-400">/</span>&gt;</span>
-        </div>
-      </div>
-      <!-- bun -->
-      <div class="flex-small-card !bg-error ">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">bun</h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/bun.svg">
-        </div>
-      </div>
-      <!-- stylex -->
-      <div class="flex-small-card !bg-error ">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">stylex</h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/stylex.svg">
-        </div>
-      </div>
-      <!-- nginx -->
-      <div class="flex-small-card !bg-info ">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">nginx</h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/nginx.svg">
-        </div>
-      </div>
-      <!-- docker -->
-      <div class="flex-small-card !bg-error ">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">docker</h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/docker.svg">
-        </div>
-      </div>
-      <!-- mongodb -->
-      <div class="flex-small-card !bg-error ">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">mongodb</h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/mongodb.svg">
-        </div>
-      </div>
-      <!-- sass -->
-      <div class="flex-small-card !bg-error ">
-        <div class="card-body">
-          <h2 class="card-title text-base-300">sass</h2>
-          <img class=" ml-2 w-8 h-8 self-center" src="/img/sass.svg">
-        </div>
-      </div>
+      <technology_card
+        v-for="[key, item] in Object.entries(technologies)"
+        :key="item"
+        :name="key"
+        :familiarity="item['familiarity']"
+        :icon="item['icon'] ? item['icon'] : ''"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import technology_card from '../components/technology_card.vue';
 export default {
     name: 'Technologie',
+    components: {
+      technology_card
+    },
     setup() {
 
         const familiarity = [ 'almost none', 'basic knowledge', 'aligable', 'comfortable', 'excelent familiarity']
 
+        const technologies = {
+          'python': {
+            'familiarity': 1,
+            'icon': 'python.svg'
+          },
+          'fastapi': {
+            'familiarity': 2,
+            'icon': 'fastapi.svg'
+          },
+          'javascript': {
+            'familiarity': 2,
+            'icon': 'js.svg'
+          },
+          'vue': {
+            'familiarity': 2,
+            'icon': 'vue.svg'
+          },
+          'html': {
+            'familiarity': 2,
+            'icon': 'html.svg'
+          },
+          'css': {
+            'familiarity': 2,
+            'icon': 'css.svg'
+          },
+          'tailwindcss': {
+            'familiarity': 3,
+            'icon': 'tailwindcss.svg'
+          },
+          'jwt': {
+            'familiarity': 4,
+            'icon': 'jwt.svg'
+          },
+          'icons8': {
+            'familiarity': 3,
+            'icon': 'icons8.svg'
+          },
+          'elixir': {
+            'familiarity': 4,
+            'icon': 'elixir.svg'
+          },
+          'svelte': {
+            'familiarity': 4,
+            'icon': 'svelte.svg'
+          },
+          'phoenix': {
+            'familiarity': 4,
+            'icon': 'phoenix.svg'
+          },
+          'alpinejs': {
+            'familiarity': 4,
+            'icon': 'alpinejs.svg'
+          },
+          'htmx': {
+            'familiarity': 3,
+            'icon': 'htmx.svg'
+          },
+          'bun': {
+            'familiarity': 4,
+            'icon': 'bun.svg'
+          },
+          'stylex': {
+            'familiarity': 4,
+            'icon': 'stylex.svg'
+          },
+          'nginx': {
+            'familiarity': 2,
+            'icon': 'nginx.svg'
+          },
+          'docker': {
+            'familiarity': 4,
+            'icon': 'docker.svg'
+          },
+          'mongodb': {
+            'familiarity': 4,
+            'icon': 'mongodb.svg'
+          },
+          'sass': {
+            'familiarity': 4,
+            'icon': 'sass.svg'
+          },
+          'git': {
+            'familiarity': 2,
+          },
+        }
+
         return {
-            familiarity
+            familiarity, technologies
         };
     }
 }
