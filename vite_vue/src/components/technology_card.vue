@@ -2,7 +2,7 @@
     <div :class="`card shadow-xl hover:opacity-90 min-w-min max-w-max ${familiarity_style}`">
         <div class="card-body">
             <h2 class="card-title text-base-300">{{ name }}</h2>
-            <img class=" ml-2 w-8 h-8 self-center" :src="`/img/${icon}`">
+            <img class=" ml-2 w-8 h-8 self-center" :src="`/app/img/${icon}`">
         </div>
     </div>
 </template>
