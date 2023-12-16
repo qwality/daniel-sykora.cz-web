@@ -48,7 +48,7 @@ export default {
             'icon': 'python.svg'
           },
           'fastapi': {
-            'familiarity': 2,
+            'familiarity': 3,
             'icon': 'fastapi.svg'
           },
           'javascript': {
@@ -56,7 +56,7 @@ export default {
             'icon': 'js.svg'
           },
           'vue': {
-            'familiarity': 2,
+            'familiarity': 3,
             'icon': 'vue.svg'
           },
           'html': {
@@ -64,63 +64,63 @@ export default {
             'icon': 'html.svg'
           },
           'css': {
-            'familiarity': 2,
+            'familiarity': 3,
             'icon': 'css.svg'
           },
           'tailwindcss': {
-            'familiarity': 3,
+            'familiarity': 4,
             'icon': 'tailwindcss.svg'
           },
           'jwt': {
-            'familiarity': 4,
+            'familiarity': 5,
             'icon': 'jwt.svg'
           },
-          'icons8': {
-            'familiarity': 3,
-            'icon': 'icons8.svg'
-          },
+          // 'icons8': {
+          //   'familiarity': 4,
+          //   'icon': 'icons8.svg'
+          // },
           'elixir': {
-            'familiarity': 4,
+            'familiarity': 5,
             'icon': 'elixir.svg'
           },
           'svelte': {
-            'familiarity': 4,
+            'familiarity': 5,
             'icon': 'svelte.svg'
           },
           'phoenix': {
-            'familiarity': 4,
+            'familiarity': 5,
             'icon': 'phoenix.svg'
           },
           'alpinejs': {
-            'familiarity': 4,
+            'familiarity': 5,
             'icon': 'alpinejs.svg'
           },
           'htmx': {
-            'familiarity': 3,
+            'familiarity': 4,
             'icon': 'htmx.svg'
           },
           'bun': {
-            'familiarity': 4,
+            'familiarity': 5,
             'icon': 'bun.svg'
           },
           'stylex': {
-            'familiarity': 4,
+            'familiarity': 5,
             'icon': 'stylex.svg'
           },
           'nginx': {
-            'familiarity': 2,
+            'familiarity': 3,
             'icon': 'nginx.svg'
           },
           'docker': {
-            'familiarity': 4,
+            'familiarity': 5,
             'icon': 'docker.svg'
           },
           'mongodb': {
-            'familiarity': 4,
+            'familiarity': 5,
             'icon': 'mongodb.svg'
           },
           'sass': {
-            'familiarity': 4,
+            'familiarity': 5,
             'icon': 'sass.svg'
           },
           'git': {

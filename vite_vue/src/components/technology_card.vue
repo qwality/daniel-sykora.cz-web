@@ -26,7 +26,7 @@ export default {
     ]
     // console.log(props.familiarity, props.name, props.icon, familiarity_styles[props.familiarity])
     const icon = props.icon ? props.icon : 'img_not_found.svg'
-    const familiarity_style = familiarity_styles[props.familiarity] ? familiarity_styles[props.familiarity] : 'bg-error'
+    const familiarity_style = familiarity_styles[props.familiarity-1] ? familiarity_styles[props.familiarity-1] : 'bg-error'
     return {
         familiarity_style, icon
     };
