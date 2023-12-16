@@ -118,6 +118,48 @@
           <span class=" font-bold text-white text-xl">&lt;<span class=" text-blue-400">/</span>&gt;</span>
         </div>
       </div>
+      <!-- bun -->
+      <div class="flex-small-card !bg-error ">
+        <div class="card-body">
+          <h2 class="card-title text-base-300">bun</h2>
+          <img class=" ml-2 w-8 h-8 self-center" src="/img/bun.svg">
+        </div>
+      </div>
+      <!-- stylex -->
+      <div class="flex-small-card !bg-error ">
+        <div class="card-body">
+          <h2 class="card-title text-base-300">stylex</h2>
+          <img class=" ml-2 w-8 h-8 self-center" src="/img/stylex.svg">
+        </div>
+      </div>
+      <!-- nginx -->
+      <div class="flex-small-card !bg-info ">
+        <div class="card-body">
+          <h2 class="card-title text-base-300">nginx</h2>
+          <img class=" ml-2 w-8 h-8 self-center" src="/img/nginx.svg">
+        </div>
+      </div>
+      <!-- docker -->
+      <div class="flex-small-card !bg-error ">
+        <div class="card-body">
+          <h2 class="card-title text-base-300">docker</h2>
+          <img class=" ml-2 w-8 h-8 self-center" src="/img/docker.svg">
+        </div>
+      </div>
+      <!-- mongodb -->
+      <div class="flex-small-card !bg-error ">
+        <div class="card-body">
+          <h2 class="card-title text-base-300">mongodb</h2>
+          <img class=" ml-2 w-8 h-8 self-center" src="/img/mongodb.svg">
+        </div>
+      </div>
+      <!-- sass -->
+      <div class="flex-small-card !bg-error ">
+        <div class="card-body">
+          <h2 class="card-title text-base-300">sass</h2>
+          <img class=" ml-2 w-8 h-8 self-center" src="/img/sass.svg">
+        </div>
+      </div>
     </div>
   </div>
 </template>
