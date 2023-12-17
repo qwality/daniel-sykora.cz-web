@@ -124,7 +124,15 @@ export default {
             'icon': 'sass.svg'
           },
           'git': {
-            'familiarity': 2,
+            'familiarity': 3,
+          },
+          'vite': {
+            'familiarity': 5,
+            // 'icon': 'vite.svg'
+          },
+          'nuxt': {
+            'familiarity': 5,
+            // 'icon': 'nuxt.svg'
           },
         }
 
