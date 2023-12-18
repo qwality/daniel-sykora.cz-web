@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .grid-card-layout{
+        @apply grid gap-4 w-full mx-auto grid-cols-[repeat(auto-fit,minmax(280px,1fr))] grid-flow-dense;
+    }
+    .grid-full-card{
+        @apply card shadow-xl bg-base-100 hover:opacity-90 col-span-full;
+    }
+    .grid-small-card{
+        @apply card shadow-xl bg-base-100 hover:opacity-90;
+    }
+    .grid-large-card{
+        @apply card shadow-xl bg-base-100 hover:opacity-90 md:col-span-2 row-span-2;
+    }
+    
+    .flex-card-layout{
+        @apply flex flex-wrap gap-4 m-auto justify-center content-center ;
+    }
+    .flex-small-card{
+        @apply card shadow-xl bg-base-100 hover:opacity-90 min-w-min max-w-max;
+    }
+    .markdown-body {
+        @apply bg-transparent text-current;
+    }
+}
+
+html{
+    overflow-y: scroll;
+}

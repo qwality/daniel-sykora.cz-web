@@ -51,21 +51,21 @@
                 <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label> 
                 
                 <div class="p-4 min-h-full bg-base-200 flex flex-col gap-4">
-                <label for="my-drawer-3" aria-label="close sidebar" class="btn btn-square btn-ghost self-end">
-                    <icon-common-cross />
-                </label>
-                <searchbar />
-                <div class=" join join-vertical">
-                    <label
-                        @click="e => $router.push(key)"
-                        v-for="[key, item] in Object.entries(menu_items)"
-                        :key="key"
-                        for="my-drawer-3"
-                        class="btn join-item"
-                    >
-                    {{ item }}
+                    <label for="my-drawer-3" aria-label="close sidebar" class="btn btn-square btn-ghost self-end">
+                        <icon-common-cross />
                     </label>
-                </div>
+                    <searchbar />
+                    <div class=" join join-vertical">
+                        <label
+                            @click="e => $router.push(key)"
+                            v-for="[key, item] in Object.entries(menu_items)"
+                            :key="key"
+                            for="my-drawer-3"
+                            class="btn join-item"
+                        >
+                        {{ item }}
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
