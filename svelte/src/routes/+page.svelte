@@ -1,5 +1,15 @@
 <div class="flex gap-4 flex-wrap">
-    <div class="card shadow-xl bg-base-100 min-w-full min-h-screen max-w-4xl mx-auto ">
+    <div class="hero bg-base-100">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <img src="/img/daniel-sykora.jpg" class="max-w-sm rounded-lg shadow-2xl opacity-70" alt="" />
+          <div>
+            <h1 class="text-5xl font-bold">Box Office News!</h1>
+            <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <button class="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+    <div class="card shadow-xl bg-base-200 min-w-full min-h-screen max-w-4xl mx-auto ">
         <div class="card-body">
             <div class="markdown-body">
                 {@html article_1}
@@ -58,3 +68,12 @@ onMount(() => {
     }
 });
 </script>
+
+<style>
+.daniel {
+    background-image: url($lib/img/daniel-sykora.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+</style>

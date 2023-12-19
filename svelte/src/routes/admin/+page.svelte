@@ -9,7 +9,7 @@
     </div>
     </div>
     <!-- login form -->
-    <div class="card shadow-xl bg-base-200 min-w-fit">
+    <div class="card shadow-xl bg-base-100 min-w-fit">
     <div class="card-body items-center">
         <h2 class="card-title text-primary">Login to admin:</h2>
         <form id="login" class="space-y-4">

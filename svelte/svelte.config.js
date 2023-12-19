@@ -10,6 +10,9 @@ const config = {
 		// 		svg()
 		// 	]
 		// }
+		paths: {
+			base: ''
+		},
 	}
 };
 

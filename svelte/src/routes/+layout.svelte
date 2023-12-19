@@ -33,12 +33,10 @@
                         {/each}
                     </div>
                 </div>
-                <div class="hidden lg:inline-flex">
-                    <SearchBar  />
-                </div>
+                <SearchBar class="hidden lg:inline-flex" />
             </div>
             <!-- main content -->
-            <div class="card md:mx-16 my-4 bg-neutral shadow-xl grow">
+            <div class="main card md:mx-16 my-4 bg-base-200 bg-opacity-70 shadow-xl grow">
                 <div class="card-body p-2 md:p-8" ref="content">
                     <slot></slot>
                 </div>
@@ -81,3 +79,28 @@
     // console.log($page)
     let my_drawer_3
 </script>
+
+<style>
+    /* .main {
+        --pattern_size: 40px;
+
+        --main_color: #222525;
+        --secondary_color: rgb(46, 46, 46);
+        --tertiary_color: rgb(41, 41, 41);
+
+        --base-color: #0000;
+        background:
+            conic-gradient(at 50% calc(100%/6),var(--main_color) 60deg,var(--base-color) 0),
+            conic-gradient(at calc(100%/6) 50%,var(--base-color) 240deg,var(--main_color) 0),
+            conic-gradient(from 180deg at calc(100%/6) calc(500%/6),var(--main_color) 60deg,var(--base-color) 0),
+            conic-gradient(from 180deg at calc(500%/6),var(--base-color) 240deg,var(--main_color) 0) calc(4*.866*var(--pattern_size)) 0,
+            repeating-linear-gradient(-150deg,var(--secondary_color) 0 calc(100%/6),var(--base-color)   0 50%),
+            repeating-linear-gradient(-30deg, var(--tertiary_color) 0 calc(100%/6),var(--base-color) 0 50%);
+        background-size: calc(6*.866*var(--pattern_size)) calc(3*var(--pattern_size))
+    } */
+    .app{
+        background-image: url('$lib/img/bg/circuit-board.svg');
+        /* background-repeat: no-repeat; */
+        /* background-size: cover; */
+    }
+</style>

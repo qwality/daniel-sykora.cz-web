@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <!-- main content -->
-                <div class="card md:mx-16 my-4 bg-neutral shadow-xl grow">
+                <div class="card md:mx-16 my-4 shadow-xl grow main">
                     <div class="card-body p-2 md:p-8" ref="content">
                         <slot />
                     </div>
@@ -86,3 +86,14 @@ export default {
 }
 
 </script>
+
+<style>
+.main {
+    background: 
+    /* linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),  */
+    url('@/assets/img/bg-cary-mary.jpg');
+  /* background-image: url('@/assets/img/bg-cary-mary.jpg'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
