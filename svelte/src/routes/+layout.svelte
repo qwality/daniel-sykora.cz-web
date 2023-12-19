@@ -1,7 +1,7 @@
 
 <div class="app min-h-screen flex flex-col">
     <div class="drawer grow">
-        <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> <!-- daisyui hidden toggle to controll side drawer -->
+        <input bind:checked={my_drawer_3} id="my-drawer-3" type="checkbox" class="drawer-toggle" /> <!-- daisyui hidden toggle to controll side drawer -->
         <div class="drawer-content flex flex-col">
             <!-- header -->
             <div class="w-full text-center bg-base-300">
@@ -10,19 +10,17 @@
                 </h1>
             </div>
             <!-- navbar -->
-            <div class="flex w-full md:px-16 navbar p-0 bg-base-200">
+            <div class="flex gap-4 w-full md:px-16 items-center bg-base-200 min-h-[4rem]">
                 <!-- hamburger icon -->
                 <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost flex-none lg:hidden mr-4">
                     <HamburgerIcon class="inline-block w-6 h-6 stroke-current" />
                 </label>
                 <!-- current page name -->
-                <div class="flex-1">
-                    <h1 class=" text-xl text-secondary">
-                        { menu_items[$page.route.id] }
-                    </h1>
-                </div>
+                <h1 class="shrink grow-0 whitespace-nowrap text-ellipsis overflow-hidden text-xl text-secondary">
+                    { menu_items[$page.route.id] ? menu_items[$page.route.id] : ''  }
+                </h1>
                 <!-- menu -->
-                <div class="flex-none hidden lg:inline-flex gap-4 h-full">
+                <div class="ml-auto pt-2 flex-none hidden lg:inline-flex h-full gap-4">
                     <div role="tablist" class="tabs tabs-lifted tabs-lg self-end">
                         {#each Object.entries(menu_items) as [key, item]}
                             <a
@@ -34,7 +32,9 @@
                             </a>
                         {/each}
                     </div>
-                    <SearchBar />
+                </div>
+                <div class="hidden lg:inline-flex">
+                    <SearchBar  />
                 </div>
             </div>
             <!-- main content -->
@@ -56,13 +56,13 @@
                 <SearchBar/>
                 <div class=" join join-vertical">
                     {#each Object.entries(menu_items) as [key, item]}
-                        <label
+                        <a
                             href="{key}"
-                            for="my-drawer-3"
+                            on:click={e => my_drawer_3 = false}
                             class="btn join-item"
                         >
                             {item}
-                        </label>
+                        </a>
                     {/each}
                 </div>
             </div>
@@ -78,5 +78,6 @@
     import SearchBar from "$lib/searchbar.svelte";
     import Footer from "$lib/footer.svelte";
     import { menu_items } from "$lib/store/menu_items.js";
-    console.log($page)
+    // console.log($page)
+    let my_drawer_3
 </script>
