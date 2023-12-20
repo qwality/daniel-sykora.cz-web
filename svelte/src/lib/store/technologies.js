@@ -1,7 +1,3 @@
-// const paths = 
-
-export const paths = import.meta.glob('$lib/img/icon/technology/*.svg')
-
 export let technologies_components = {}
 
 export let technologies = {
@@ -13,7 +9,6 @@ export let technologies = {
     'css': 3,
     'tailwindcss': 3,
     'jwt': 5,
-    // 'icons8': 4,
     'elixir': 5,
     'svelte': 4,
     'phoenix': 5,
@@ -32,11 +27,29 @@ export let technologies = {
     'graphql': 5,
 }
 
-for (const path in paths) {
+for (const path in import.meta.glob('$lib/img/icon/technology/*.svg')) {
     const name = path.split('/').pop().split('.')[0]
-    technologies_components[name] = {
-        name: name,
-        component: await import(path + '?component'),
-        level: technologies[name]
-    }
+    // import(/* @vite-ignore */path + '?component').then(component => {
+    //     technologies_components[name] = component;
+    // })
+    // console.log(path)
+    // const s = path + '?component'
+    const s2 = `${path}?component`
+    // const s3 = '/src/lib/img/icon/technology/' + name + '.svg?component'
+    // console.log(s, s2)
+    technologies_components[name] = import(/* @vite-ignore */s2)
+    // technologies_components[name] = await import(/* @vite-ignore */path + '?component')
 }
+// let imports = []
+
+// for (const path in import.meta.glob('$lib/img/icon/technology/*.svg')) {
+//     imports.push(
+//         import(/* @vite-ignore */path + '?component').then(component => {
+//             technologies_components[path.split('/').pop().split('.')[0]] = component;
+//         })
+//     );
+// }
+
+// Promise.all(imports).then(() => {  })
+
+// console.log('loading technologies...')

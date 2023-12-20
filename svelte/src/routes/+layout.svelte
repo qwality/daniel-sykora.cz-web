@@ -24,7 +24,7 @@
                     <div role="tablist" class="tabs tabs-lifted tabs-lg self-end">
                         {#each Object.entries(menu_items) as [key, item]}
                             <a
-                                href="{key}"
+                                href="{base}{key}"
                                 role="tab"
                                 class={`tab hover:bg-base-100 ${menu_items[$page.route.id] == item ? 'tab-active' : ''}`} 
                             >
@@ -51,11 +51,11 @@
                 <label for="my-drawer-3" aria-label="close sidebar" class="btn btn-square btn-ghost self-end">
                     <CrossIcon class="stroke-current"/>
                 </label>
-                <SearchBar/>
+                <SearchBar onClick={e => my_drawer_3 = false}/>
                 <div class=" join join-vertical">
                     {#each Object.entries(menu_items) as [key, item]}
                         <a
-                            href="{key}"
+                            href="{base}{key}"
                             on:click={e => my_drawer_3 = false}
                             class="btn join-item"
                         >
@@ -68,9 +68,16 @@
     </div>
 </div>
 
+
+
 <script>
+    
+    
+
     import "../app.css";
     import { page } from '$app/stores';
+    import { base } from '$app/paths';
+
     import HamburgerIcon from "$lib/img/icon/common/hamburger.svg?component";
     import CrossIcon from "$lib/img/icon/common/cross.svg?component";
     import SearchBar from "$lib/searchbar.svelte";

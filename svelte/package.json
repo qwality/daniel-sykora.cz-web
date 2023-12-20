@@ -13,7 +13,7 @@
 		"autoprefixer": "^10.4.16",
 		"daisyui": "^4.4.20",
 		"postcss": "^8.4.32",
-		"svelte": "^3.54.0",
+		"svelte": "^4.2.8",
 		"tailwindcss": "^3.3.6",
 		"vite": "^4.0.0",
 		"vite-plugin-svelte-svg": "^2.3.0"

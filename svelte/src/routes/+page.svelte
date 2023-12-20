@@ -1,11 +1,13 @@
 <div class="flex gap-4 flex-wrap">
     <div class="hero bg-base-100">
         <div class="hero-content flex-col lg:flex-row-reverse">
-          <img src="/img/daniel-sykora.jpg" class="max-w-sm rounded-lg shadow-2xl opacity-70" alt="" />
+          <img src="/svelte/img/daniel-sykora.jpg" class="md:max-w-sm rounded-lg shadow-2xl opacity-70 max-w-full" alt="" />
           <div>
-            <h1 class="text-5xl font-bold">Box Office News!</h1>
-            <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-            <button class="btn btn-primary">Get Started</button>
+            <h1 class="text-5xl font-bold">Blog Page</h1>
+            <p class="py-6 max-w-[64ch]">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores ullam quasi ea? Soluta quaerat iste eaque, sapiente eligendi aut dolor enim nobis nihil itaque debitis obcaecati est nulla quam dignissimos!
+            </p>
+            <button class="btn btn-primary">Nejaky button</button>
           </div>
         </div>
       </div>
@@ -32,6 +34,7 @@ import MarkdownIt from "markdown-it";
 import axios from "axios";
 
 import { onMount } from "svelte";
+
 
 async function fetch_article(id){
     try {
@@ -70,10 +73,10 @@ onMount(() => {
 </script>
 
 <style>
-.daniel {
+/* .daniel {
     background-image: url($lib/img/daniel-sykora.jpg);
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-}
+} */
 </style>
