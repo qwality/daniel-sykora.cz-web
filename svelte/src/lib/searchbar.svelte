@@ -1,4 +1,3 @@
-
 <div {...$$props}>
     <div class="join" >
         <input bind:value={search_query} type="text" placeholder="Search..." class=" join-item input input-bordered max-w-xs" />

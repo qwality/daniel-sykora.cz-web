@@ -27,6 +27,8 @@ export let technologies = {
     'graphql': 5,
 }
 
+import { base } from '$app/paths'
+
 for (const path in import.meta.glob('$lib/img/icon/technology/*.svg')) {
     const name = path.split('/').pop().split('.')[0]
     // import(/* @vite-ignore */path + '?component').then(component => {
@@ -34,7 +36,7 @@ for (const path in import.meta.glob('$lib/img/icon/technology/*.svg')) {
     // })
     // console.log(path)
     // const s = path + '?component'
-    const s2 = `${path}?component`
+    const s2 = `${base}${path}?component`
     // const s3 = '/src/lib/img/icon/technology/' + name + '.svg?component'
     // console.log(s, s2)
     technologies_components[name] = import(/* @vite-ignore */s2)

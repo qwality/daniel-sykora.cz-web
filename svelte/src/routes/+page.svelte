@@ -1,7 +1,7 @@
 <div class="flex gap-4 flex-wrap">
     <div class="hero bg-base-100">
         <div class="hero-content flex-col lg:flex-row-reverse">
-          <img src="/svelte/img/daniel-sykora.jpg" class="md:max-w-sm rounded-lg shadow-2xl opacity-70 max-w-full" alt="" />
+          <img src="{base}/img/daniel-sykora.jpg" class="md:max-w-sm rounded-lg shadow-2xl opacity-70 max-w-full" alt="" />
           <div>
             <h1 class="text-5xl font-bold">Blog Page</h1>
             <p class="py-6 max-w-[64ch]">
@@ -34,7 +34,7 @@ import MarkdownIt from "markdown-it";
 import axios from "axios";
 
 import { onMount } from "svelte";
-
+import { base } from '$app/paths';
 
 async function fetch_article(id){
     try {

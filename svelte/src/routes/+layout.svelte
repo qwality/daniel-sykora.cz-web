@@ -71,9 +71,6 @@
 
 
 <script>
-    
-    
-
     import "../app.css";
     import { page } from '$app/stores';
     import { base } from '$app/paths';
@@ -83,7 +80,7 @@
     import SearchBar from "$lib/searchbar.svelte";
     import Footer from "$lib/footer.svelte";
     import { menu_items } from "$lib/store/menu_items.js";
-    // console.log($page)
+
     let my_drawer_3
 </script>
 
