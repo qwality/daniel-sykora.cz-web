@@ -3,13 +3,13 @@
         <div class="hero-content flex-col gap-8 lg:flex-row-reverse">
           <img src="{base}/img/daniel-sykora.jpg" class="md:max-w-sm rounded-lg shadow-2xl opacity-70 max-w-full" alt="" />
           <div>
-            <h1 class="text-5xl font-bold">Daniel Sykora - Developer</h1>
-            <p class="py-6 max-w-[64ch]">
+            <h1 class=" px-6 text-5xl font-bold text-secondary">Daniel Sykora - Developer</h1>
+            <p class="p-6 max-w-[64ch]">
                 Vítejte! Jsem Daniel Sykora, aspirující developer s vášní pro technologie a inovace.
                 Ačkoli momentálně pracuji jako kurýr, můj cíl je stát se plnohodnotným vývojářem.
                 Tento web je odrazem mé cesty a pokroku - stále se rozvíjející portfolio, kde sdílím své projekty a učení se novým technologiím.
             </p>
-            <button class="btn btn-primary">Nejaky button</button>
+            <!-- <button class="btn btn-primary">Nejaky button</button> -->
           </div>
         </div>
       </div>
@@ -51,15 +51,15 @@ let article_1
 let article_2
 
 onMount(() => {
-    const localArticle1 = localStorage.getItem('article_1');
-    const localArticle2 = localStorage.getItem('article_2');
+    const localArticle1 = sessionStorage.getItem('article_1');
+    const localArticle2 = sessionStorage.getItem('article_2');
 
     if(localArticle1) {
         article_1 = localArticle1;
     } else {
         fetch_article(3).then((data) => {
             article_1 = data;
-            localStorage.setItem('article_1', data);
+            sessionStorage.setItem('article_1', data);
         });
     }
 
@@ -68,7 +68,7 @@ onMount(() => {
     } else {
         fetch_article('README').then((data) => {
             article_2 = data;
-            localStorage.setItem('article_2', data);
+            sessionStorage.setItem('article_2', data);
         });
     }
 });
