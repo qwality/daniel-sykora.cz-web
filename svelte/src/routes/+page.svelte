@@ -13,7 +13,7 @@
           </div>
         </div>
       </div>
-    <div class="card shadow-xl bg-base-200 min-w-full min-h-screen max-w-4xl mx-auto ">
+    <div class="card shadow-xl bg-base-200 min-w-full max-w-4xl mx-auto ">
         <div class="card-body">
             <div class="markdown-body">
                 {@html article_1}
@@ -57,7 +57,7 @@ onMount(() => {
     if(localArticle1) {
         article_1 = localArticle1;
     } else {
-        fetch_article('README').then((data) => {
+        fetch_article(3).then((data) => {
             article_1 = data;
             localStorage.setItem('article_1', data);
         });
@@ -66,7 +66,7 @@ onMount(() => {
     if(localArticle2){
         article_2 = localArticle2;
     } else {
-        fetch_article(3).then((data) => {
+        fetch_article('README').then((data) => {
             article_2 = data;
             localStorage.setItem('article_2', data);
         });

@@ -1,23 +1,9 @@
-# Daniel Sykora - Osobní Webová Prezentace
+# Popis tohoto webu
 
-Tento repozitář hostuje zdrojový kód mé webové prezentace. Cílem tohoto projektu je poskytnout interaktivní a informativní online platformu, která prezentuje mé profesionální úspěchy, projekty a zkušenosti.
+V rámci tohoto projektu jsem zahájil provoz vlastního VPS serveru, který jsem následně aktualizoval na Ubuntu 20.04.6 LTS. Tento krok byl nezbytný pro podporu Node.js verze 18 a vyšší, což je klíčová požadavek pro framework SvelteKit 2, na kterém je tento web postaven. Web také využívá Tailwind CSS a DaisyUI pro stylování, ačkoli TypeScript zatím není implementován, mám v plánu ho do projektu začlenit v budoucnosti.
 
-## Funkce
+Hlavní stránka slouží jako základní prezentace a obsahuje navigační lištu, která umožňuje přístup k různým sekcím webu. UI design je plně responzivní - na zařízeních s menšími obrazovkami se navigační lišta transformuje do praktického bočního panelu (sidebaru).
 
-- **Blog**: Sekce, kde sdílím myšlenky, novinky a odborné články.
-- **Portfolio**: Vitrína mých prací a projektů.
-- **Interaktivní Rozhraní**: Snadno ovladatelné a přístupné webové rozhraní.
+Web zahrnuje několik klíčových sekcí: životopis, přehled technologií, a administrativní sekci s mockupem přihlašování. V navigační liště se navíc nachází vyhledávací panel, který momentálně využívá URL query, ale samotná vyhledávací funkce ještě není implementována.
 
-## Technologie
-
-### Vue.js
-
-Projekt využívá Vue.js, progresivní JavaScript framework určený pro vývoj dynamických uživatelských rozhraní. Vue.js je charakteristický svou reaktivitou a složenými komponentami, které usnadňují vývoj interaktivních webových aplikací.
-
-### FastAPI
-
-Pro backend jsem zvolil FastAPI, moderní a rychlý webový framework pro Python 3.6+. FastAPI je optimalizovaný pro vysoký výkon a rychlou vývojářskou zpětnou vazbu, s podporou pro asynchronní programování.
-
-### Tailwind CSS
-
-Pro stylizaci využívám Tailwind CSS, utility-first framework, který umožňuje efektivní a přizpůsobitelný design.
+Celkově je tento web ukázkou mého technického pokroku a odhodlání rozvíjet se v oblasti web developmentu.

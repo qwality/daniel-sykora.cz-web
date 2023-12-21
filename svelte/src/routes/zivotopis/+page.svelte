@@ -42,7 +42,7 @@
         </div>
     </div>
     <!-- Technologie -->
-    <div class="grid-small-card">
+    <a class="grid-small-card hover:outline outline-accent transition-[outline]" href="{base}/technologies">
         <div class="card-body">
             <h2 class="card-title text-secondary">Technologie:</h2>
             <div class="grid grid-cols-[min-content_min-content] gap-x-8 gap-y-2">
@@ -54,7 +54,7 @@
             <span class="flex flex-nowrap">Svelte     <SvelteIcon class=" ml-2 w-4 h-4 self-center"/></span>
             </div>
         </div>
-    </div>
+    </a>
     <!-- Vzdelani -->
     <div class="grid-small-card">
         <div class="card-body">
@@ -82,10 +82,10 @@
         <div class="card-body">
             <h2 class="card-title text-secondary">Projekty:</h2>
             <div class="flex flex-col  gap-4">
-            <p><b class="whitespace-nowrap text-lg link link-accent">Tetris:</b> Základní hra tetris s ovládáním pomocí šipek a počítáním score, použil jsem knihovnu Pygame, která je optimalizovaná pro hry v Pythonu. </p>
-            <p><b class="whitespace-nowrap text-lg link link-accent">Hexagons:</b> Základ pro hexagonální mapu, objektově orientovaný, taky pomocí Pygame. </p>
-            <p><b class="whitespace-nowrap text-lg link link-accent">Cvičení na leetcode:</b> Zde si procvičuju své schopnosti řešením různých algoritmických úloh a vylepšuji tak své dovednosti v oblasti programování a logického myšlení. </p>
-            <p><b class="whitespace-nowrap text-lg link link-accent">This.server:</b> Tato stránka je součástí mého projektu, běží na vlastním serveru s vlastním backendem. Pro správný chod jsem nainstaloval nejnovější verzi Pythonu a vytvořil jednoduchý bash skript pro rychlý redeploy. </p>
+            <p><a target="_blank" href="{links.tetris}" class="whitespace-nowrap font-bold text-lg link link-accent">Tetris:</a> Základní hra tetris s ovládáním pomocí šipek a počítáním score, použil jsem knihovnu Pygame, která je optimalizovaná pro hry v Pythonu. </p>
+            <p><a target="_blank" href="{links.hexagons}" class="whitespace-nowrap font-bold text-lg link link-accent">Hexagons:</a> Základ pro hexagonální mapu, objektově orientovaný, taky pomocí Pygame. </p>
+            <p><a target="_blank" href="{links.leetcode}" class="whitespace-nowrap font-bold text-lg link link-accent">Cvičení na leetcode:</a> Zde si procvičuju své schopnosti řešením různých algoritmických úloh a vylepšuji tak své dovednosti v oblasti programování a logického myšlení. </p>
+            <p><a target="_blank" href="{links.this_server}" class="whitespace-nowrap font-bold text-lg link link-accent">This.server:</a> Tato utilita je určena pro správu serverů na VPS. Poskytuje skripty pro aktualizaci a správu webových aplikací. </p>
             </div>
         </div>
     </div>
@@ -101,6 +101,9 @@
 </div>
 
 <script>
+    import { base } from '$app/paths';
+    import { links } from "$lib/store/links.js";
+
     import PythonIcon       from '$lib/img/icon/technology/icon-python.svg?component'
     import JavascriptIcon   from '$lib/img/icon/technology/icon-javascript.svg?component'
     import HtmlIcon         from '$lib/img/icon/technology/icon-html.svg?component'

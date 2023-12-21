@@ -1,38 +1,9 @@
-# create-svelte
+# Popis tohoto webu
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+V rámci tohoto projektu jsem zahájil provoz vlastního VPS serveru, který jsem následně aktualizoval na Ubuntu 20.04.6 LTS. Tento krok byl nezbytný pro podporu Node.js verze 18 a vyšší, což je klíčová požadavek pro framework SvelteKit 2, na kterém je tento web postaven. Web také využívá Tailwind CSS a DaisyUI pro stylování, ačkoli TypeScript zatím není implementován, mám v plánu ho do projektu začlenit v budoucnosti.
 
-## Creating a project
+Hlavní stránka slouží jako základní prezentace a obsahuje navigační lištu, která umožňuje přístup k různým sekcím webu. UI design je plně responzivní - na zařízeních s menšími obrazovkami se navigační lišta transformuje do praktického bočního panelu (sidebaru).
 
-If you're seeing this, you've probably already done this step. Congrats!
+Web zahrnuje několik klíčových sekcí: životopis, přehled technologií, a administrativní sekci s mockupem přihlašování. V navigační liště se navíc nachází vyhledávací panel, který momentálně využívá URL query, ale samotná vyhledávací funkce ještě není implementována.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Celkově je tento web ukázkou mého technického pokroku a odhodlání rozvíjet se v oblasti web developmentu.
