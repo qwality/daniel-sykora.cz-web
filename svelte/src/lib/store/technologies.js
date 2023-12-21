@@ -44,5 +44,4 @@ for (const path in import.meta.glob('$lib/img/icon/technology/*.svg')) {
         // import(/* @vite-ignore */'$lib/img/icon/technology/'+technology_name+'.svg?component')
         // import(/* @vite-ignore */'$lib/img/icon/technology/python.svg?component')
         import(`.././img/icon/technology/icon-${technology_name}.svg?component`)
-
 }
