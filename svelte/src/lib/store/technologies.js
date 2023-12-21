@@ -1,4 +1,4 @@
-export let technologies_components = {}
+export let technologies_promisses = {}
 
 export let technologies = {
     'python': 1,
@@ -37,7 +37,7 @@ for (const path in import.meta.glob('$lib/img/icon/technology/*.svg')) {
         // `${base}${path}?component`
         // `.././img/icon/technology/icon-${technology_name}.svg?component`
     // console.log('svelte/src/lib/img/icon/technology/' + technology_name + '.svg?component' + '\n' + '$lib/img/icon/technology/'+technology_name+'.svg?component' + '\n')
-    technologies_components[technology_name] =
+    technologies_promisses[technology_name] =
         // import(/* @vite-ignore */import_string)
         // import(/* @vite-ignore */`${base}${path}?component`)
         // import(/* @vite-ignore */base + path + '?component')

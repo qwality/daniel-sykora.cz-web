@@ -13,18 +13,16 @@
             {/await}
         </div>
     </div>
-    
 </div>
 
 <script>
-
-    import { technologies_components } from "$lib/store/technologies.js";
+    import { technologies_promisses } from "$lib/store/technologies.js";
     import Fallback from '$lib/img/icon/common/fallback.svg?component'
 
     export let name
     export let level
 
-    let component = technologies_components[name]
+    let component = technologies_promisses[name]
 
     const level_style = [
         'bg-success',
