@@ -1,11 +1,13 @@
 <div class="flex gap-4 flex-wrap">
     <div class="hero bg-base-100">
-        <div class="hero-content flex-col lg:flex-row-reverse">
+        <div class="hero-content flex-col gap-8 lg:flex-row-reverse">
           <img src="{base}/img/daniel-sykora.jpg" class="md:max-w-sm rounded-lg shadow-2xl opacity-70 max-w-full" alt="" />
           <div>
-            <h1 class="text-5xl font-bold">Blog Page</h1>
+            <h1 class="text-5xl font-bold">Daniel Sykora - Developer</h1>
             <p class="py-6 max-w-[64ch]">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores ullam quasi ea? Soluta quaerat iste eaque, sapiente eligendi aut dolor enim nobis nihil itaque debitis obcaecati est nulla quam dignissimos!
+                Vítejte! Jsem Daniel Sykora, aspirující developer s vášní pro technologie a inovace.
+                Ačkoli momentálně pracuji jako kurýr, můj cíl je stát se plnohodnotným vývojářem.
+                Tento web je odrazem mé cesty a pokroku - stále se rozvíjející portfolio, kde sdílím své projekty a učení se novým technologiím.
             </p>
             <button class="btn btn-primary">Nejaky button</button>
           </div>
@@ -64,7 +66,7 @@ onMount(() => {
     if(localArticle2){
         article_2 = localArticle2;
     } else {
-        fetch_article(2).then((data) => {
+        fetch_article(3).then((data) => {
             article_2 = data;
             localStorage.setItem('article_2', data);
         });
