@@ -1,4 +1,4 @@
-# Neco malo o me
+# Něco málo o mě
 
 Ačkoli nejsem profesionální designer, věnoval jsem mimořádnou péči tomu, aby tento web měl přitažlivý a funkční design. Moje cesta v oblasti web developmentu, ač časově omezená, je plná odhodlání a energie. Každý volný moment věnuji rozvoji svých dovedností a objevování nových technologií.
 

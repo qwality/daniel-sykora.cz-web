@@ -28,6 +28,7 @@
             </div>
         </div>
     </div>
+    <button on:click={e => {clear_storage(); load_articles(); location.reload()}} class="btn btn-secondary w-min px-8 text-lg whitespace-nowrap col-span-full ml-auto mt-auto">Reload</button>
 </div>
 
 <script>
@@ -47,17 +48,16 @@ async function fetch_article(id){
     }
 }
 
-let article_1
-let article_2
+function clear_storage(){
+    sessionStorage.clear();
+    localStorage.clear();
+}
 
-onMount(() => {
-    const localArticle1 = sessionStorage.getItem('article_1');
-    const localArticle2 = sessionStorage.getItem('article_2');
-
+function load_articles(){
     if(localArticle1) {
         article_1 = localArticle1;
     } else {
-        fetch_article(2).then((data) => {
+        fetch_article(3).then((data) => {
             article_1 = data;
             sessionStorage.setItem('article_1', data);
         });
@@ -66,11 +66,23 @@ onMount(() => {
     if(localArticle2){
         article_2 = localArticle2;
     } else {
-        fetch_article('README').then((data) => {
+        fetch_article(2).then((data) => {
             article_2 = data;
             sessionStorage.setItem('article_2', data);
         });
     }
+}
+
+let article_1
+let article_2
+
+let localArticle1
+let localArticle2
+
+onMount(() => {
+    localArticle1 = sessionStorage.getItem('article_1')
+    localArticle2 = sessionStorage.getItem('article_2')
+    load_articles();
 });
 </script>
 
