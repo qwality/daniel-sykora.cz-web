@@ -8,8 +8,6 @@
         Printable version
     </a>
 </div>
-
-
 <script>
     import {base} from '$app/paths';
     import Zivotopis from "$lib/zivotopis.svelte";
