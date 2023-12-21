@@ -1,4 +1,5 @@
-<div class="card shadow-xl hover:opacity-90 min-w-min max-w-max {level_style}">
+
+<div class="card shadow-xl hover:opacity-90 min-w-min max-w-max {level_style} card-hover-tiny">
     <div class="card-body">
         <h2 class="card-title text-base-300 self-center">{name}</h2>
         <div class=" self-center bg-neutral-600 rounded-2xl shadow-lg p-2 bg-opacity-50">

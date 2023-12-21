@@ -7,13 +7,29 @@
         @apply grid gap-4 w-full mx-auto grid-cols-[repeat(auto-fit,minmax(280px,1fr))] grid-flow-dense;
     }
     .grid-full-card{
-        @apply card shadow-xl bg-base-100 hover:opacity-90 col-span-full;
+        @apply card shadow-xl bg-base-100 col-span-full;
     }
     .grid-small-card{
-        @apply card shadow-xl bg-base-100 hover:opacity-90;
+        @apply card shadow-xl bg-base-100;
     }
     .grid-large-card{
-        @apply card shadow-xl bg-base-100 hover:opacity-90 md:col-span-2 row-span-2;
+        @apply card shadow-xl bg-base-100 md:col-span-2 row-span-2;
+    }
+
+    .card-hover-large{
+        @apply transition-[scale_opacity_outline] hover:opacity-90 hover:scale-[1.01];
+    }
+
+    .card-hover-small{
+        @apply transition-[scale_opacity_outline] hover:opacity-90 hover:scale-[1.02];
+    }
+
+    .card-hover-tiny{
+        @apply transition-[scale_opacity_outline] hover:opacity-90 hover:scale-[1.03];
+    }
+
+    .card-link{
+        @apply hover:outline outline-accent transition-[outline];
     }
     
     .flex-card-layout{

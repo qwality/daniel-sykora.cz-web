@@ -23,6 +23,7 @@
         <TechnologyCard
             name={name}
             level={level}
+            class="card-hover"
         />
     {/each}
 </div>
