@@ -2,9 +2,9 @@
     <!-- info card -->
     <div class="card shadow-xl bg-base-100 max-w-[18rem] m-auto">
     <div class="card-body">
-        <h2 class="card-title text-secondary">K cemu tu je admin?</h2>
+        <h2 class="card-title text-secondary">K čemu tu je admin?</h2>
         <p>
-        Tento login slouzi pro pristup do admin rozhrani, kde je mozne pridavat, editovat a mazat prispevky.
+        Tento login slouží pro přístup do admin rozhrani, kde je možné přidávat, editovat a mazat příspěvky.
         </p>
     </div>
     </div>
