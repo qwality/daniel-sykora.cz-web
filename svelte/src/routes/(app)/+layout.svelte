@@ -17,7 +17,8 @@
                 </label>
                 <!-- current page name -->
                 <h1 class="shrink grow-0 whitespace-nowrap text-ellipsis overflow-hidden text-xl text-secondary">
-                    { menu_items[$page.route.id] ? menu_items[$page.route.id] : ''  }
+                    <!-- { menu_items[$page.route.id] ? menu_items[$page.route.id] : ''  } -->
+                    { $page.data.name }
                 </h1>
                 <!-- menu -->
                 <div class="ml-auto pt-2 flex-none hidden lg:inline-flex h-full gap-4">
@@ -26,7 +27,7 @@
                             <a
                                 href="{base}{key}"
                                 role="tab"
-                                class={`tab hover:bg-base-100 ${menu_items[$page.route.id] == item ? 'tab-active' : ''}`} 
+                                class={`tab hover:bg-base-100 ${$page.data.name == item ? 'tab-active' : ''}`} 
                             >
                                 {item}
                             </a>
@@ -71,7 +72,7 @@
 
 
 <script>
-    import "../app.css";
+    import "../../app.css";
     import { page } from '$app/stores';
     import { base } from '$app/paths';
 

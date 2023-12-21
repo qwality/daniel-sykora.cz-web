@@ -3,7 +3,7 @@
         <a href="{links.this}"><IconBlog class="fill-current w-8 h-8"/> </a>
         <p class="">© 2023 Daniel Sykora. Tento web jsem vytvoril s ucelem uplatneni svych dosavadnich zkusenosti.</p>
     </aside> 
-    <nav class=" flex gap-4 justify-between w-full md:w-min md:justify-self-end">
+    <nav class=" flex gap-4 justify-around w-full md:w-min md:justify-self-end">
         <!-- <a href=" "><TwitterIcon class="fill-current w-8 h-8"/> </a> -->
         <!-- <a href=" "><YoutubeIcon class="fill-current w-8 h-8"/> </a> -->
         <a href="{links.facebook}" target="_blank"><FacebookIcon class="fill-current w-8 h-8"/> </a>

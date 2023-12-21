@@ -82,10 +82,11 @@
         <div class="card-body">
             <h2 class="card-title text-secondary">Projekty:</h2>
             <div class="flex flex-col  gap-4">
-            <p><a target="_blank" href="{links.tetris}" class="whitespace-nowrap font-bold text-lg link link-accent">Tetris:</a> Základní hra tetris s ovládáním pomocí šipek a počítáním score, použil jsem knihovnu Pygame, která je optimalizovaná pro hry v Pythonu. </p>
-            <p><a target="_blank" href="{links.hexagons}" class="whitespace-nowrap font-bold text-lg link link-accent">Hexagons:</a> Základ pro hexagonální mapu, objektově orientovaný, taky pomocí Pygame. </p>
-            <p><a target="_blank" href="{links.leetcode}" class="whitespace-nowrap font-bold text-lg link link-accent">Cvičení na leetcode:</a> Zde si procvičuju své schopnosti řešením různých algoritmických úloh a vylepšuji tak své dovednosti v oblasti programování a logického myšlení. </p>
-            <p><a target="_blank" href="{links.this_server}" class="whitespace-nowrap font-bold text-lg link link-accent">This.server:</a> Tato utilita je určena pro správu serverů na VPS. Poskytuje skripty pro aktualizaci a správu webových aplikací. </p>
+                <p><a target="_blank" href="{links.this_web}" class="whitespace-nowrap font-bold text-lg link link-accent">This.web:</a> Tento web, postavený na SvelteKit 2, používá Node.js a je hostován na VPS serveru s Ubuntu. Stylování zajišťuje Tailwind CSS a DaisyUI. Má responzivní UI, s navigační lištou přeměněnou na sidebar na menších zařízeních. Obsahuje sekce jako životopis, přehled technologií, a administrativní sekci s mockupem přihlašování. V navigační liště je vyhledávací panel. Web demonstruje pokrok v oblasti web developmentu. </p>
+                <p><a target="_blank" href="{links.this_server}" class="whitespace-nowrap font-bold text-lg link link-accent">This.server:</a> Tato utilita je určena pro správu serverů na VPS. Poskytuje skripty pro aktualizaci a správu webových aplikací. </p>
+                <p><a target="_blank" href="{links.leetcode}" class="whitespace-nowrap font-bold text-lg link link-accent">Cvičení na leetcode:</a> Zde si procvičuju své schopnosti řešením různých algoritmických úloh a vylepšuji tak své dovednosti v oblasti programování a logického myšlení. </p>
+                <p><a target="_blank" href="{links.tetris}" class="whitespace-nowrap font-bold text-lg link link-accent">Tetris:</a> Základní hra tetris s ovládáním pomocí šipek a počítáním score, použil jsem knihovnu Pygame, která je optimalizovaná pro hry v Pythonu. </p>
+                <p><a target="_blank" href="{links.hexagons}" class="whitespace-nowrap font-bold text-lg link link-accent">Hexagons:</a> Základ pro hexagonální mapu, objektově orientovaný, taky pomocí Pygame. </p>
             </div>
         </div>
     </div>
@@ -98,6 +99,7 @@
             </div>
         </div>
     </div>
+    
 </div>
 
 <script>

@@ -3,7 +3,7 @@
 export const menu_items = {
     '/': 'Home',
     '/zivotopis': 'Zivotopis',
-    '/this-project': 'This project',
+    '/this-project': 'This Project',
     '/technologies': 'Technologies',
     '/admin': 'Admin',
 }
