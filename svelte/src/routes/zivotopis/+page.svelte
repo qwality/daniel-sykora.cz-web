@@ -101,10 +101,10 @@
 </div>
 
 <script>
-    import PythonIcon       from '$lib/img/icon/technology/python.svg?component'
-    import JavascriptIcon   from '$lib/img/icon/technology/javascript.svg?component'
-    import HtmlIcon         from '$lib/img/icon/technology/html.svg?component'
-    import CssIcon          from '$lib/img/icon/technology/css.svg?component'
-    import FastapiIcon      from '$lib/img/icon/technology/fastapi.svg?component'
-    import VueIcon          from '$lib/img/icon/technology/vue.svg?component'
+    import PythonIcon       from '$lib/img/icon/technology/icon-python.svg?component'
+    import JavascriptIcon   from '$lib/img/icon/technology/icon-javascript.svg?component'
+    import HtmlIcon         from '$lib/img/icon/technology/icon-html.svg?component'
+    import CssIcon          from '$lib/img/icon/technology/icon-css.svg?component'
+    import FastapiIcon      from '$lib/img/icon/technology/icon-fastapi.svg?component'
+    import VueIcon          from '$lib/img/icon/technology/icon-vue.svg?component'
 </script>

@@ -30,28 +30,19 @@ export let technologies = {
 import { base } from '$app/paths'
 
 for (const path in import.meta.glob('$lib/img/icon/technology/*.svg')) {
-    const name = path.split('/').pop().split('.')[0]
-    // import(/* @vite-ignore */path + '?component').then(component => {
-    //     technologies_components[name] = component;
-    // })
-    // console.log(path)
-    // const s = path + '?component'
-    const s2 = `${base}${path}?component`
-    // const s3 = '/src/lib/img/icon/technology/' + name + '.svg?component'
-    // console.log(s, s2)
-    technologies_components[name] = import(/* @vite-ignore */s2)
-    // technologies_components[name] = await import(/* @vite-ignore */path + '?component')
+    let technology_name = path.split('/').pop().split('.')[0]
+    technology_name = technology_name.split('-')[1]
+
+    // const import_string =
+        // `${base}${path}?component`
+        // `.././img/icon/technology/icon-${technology_name}.svg?component`
+    // console.log('svelte/src/lib/img/icon/technology/' + technology_name + '.svg?component' + '\n' + '$lib/img/icon/technology/'+technology_name+'.svg?component' + '\n')
+    technologies_components[technology_name] =
+        // import(/* @vite-ignore */import_string)
+        // import(/* @vite-ignore */`${base}${path}?component`)
+        // import(/* @vite-ignore */base + path + '?component')
+        // import(/* @vite-ignore */'$lib/img/icon/technology/'+technology_name+'.svg?component')
+        // import(/* @vite-ignore */'$lib/img/icon/technology/python.svg?component')
+        import(`.././img/icon/technology/icon-${technology_name}.svg?component`)
+
 }
-// let imports = []
-
-// for (const path in import.meta.glob('$lib/img/icon/technology/*.svg')) {
-//     imports.push(
-//         import(/* @vite-ignore */path + '?component').then(component => {
-//             technologies_components[path.split('/').pop().split('.')[0]] = component;
-//         })
-//     );
-// }
-
-// Promise.all(imports).then(() => {  })
-
-// console.log('loading technologies...')
