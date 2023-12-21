@@ -51,7 +51,7 @@
             <span class="flex flex-nowrap">HTML       <HtmlIcon class=" ml-2 w-4 h-4 self-center"/></span>
             <span class="flex flex-nowrap"><i>CSS </i><CssIcon class=" ml-2 w-4 h-4 self-center"/></span>
             <span class="flex flex-nowrap">FastAPI    <FastapiIcon class=" ml-2 w-4 h-4 self-center"/></span>
-            <span class="flex flex-nowrap">Vue        <VueIcon class=" ml-2 w-4 h-4 self-center"/></span>
+            <span class="flex flex-nowrap">Svelte     <SvelteIcon class=" ml-2 w-4 h-4 self-center"/></span>
             </div>
         </div>
     </div>
@@ -106,5 +106,5 @@
     import HtmlIcon         from '$lib/img/icon/technology/icon-html.svg?component'
     import CssIcon          from '$lib/img/icon/technology/icon-css.svg?component'
     import FastapiIcon      from '$lib/img/icon/technology/icon-fastapi.svg?component'
-    import VueIcon          from '$lib/img/icon/technology/icon-vue.svg?component'
+    import SvelteIcon       from '$lib/img/icon/technology/icon-svelte.svg?component'
 </script>
