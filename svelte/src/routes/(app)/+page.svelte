@@ -57,7 +57,7 @@ onMount(() => {
     if(localArticle1) {
         article_1 = localArticle1;
     } else {
-        fetch_article(3).then((data) => {
+        fetch_article(2).then((data) => {
             article_1 = data;
             sessionStorage.setItem('article_1', data);
         });
