@@ -27,8 +27,6 @@ export let technologies = {
     'graphql': 5,
 }
 
-import { base } from '$app/paths'
-
 for (const path in import.meta.glob('$lib/img/icon/technology/*.svg')) {
     let technology_name =
         path.split('/').pop().split('.')[0].split('-')[1]
