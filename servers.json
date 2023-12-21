@@ -23,12 +23,6 @@
                 "run": "npm --prefix ./vite_vue i && npm --prefix ./vite_vue run build &",
                 "stop": "echo 'no stop command'"
             }
-        },
-        "svelte": {
-            "commands": {
-                "run": "npm --prefix ./svelte i && npm --prefix .svelte run build && node svelte/build",
-                "stop": "kill -9 $(lsof -i:3000 -t)"
-            }
         }
     }
 }
