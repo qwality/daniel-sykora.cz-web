@@ -30,18 +30,9 @@ export let technologies = {
 import { base } from '$app/paths'
 
 for (const path in import.meta.glob('$lib/img/icon/technology/*.svg')) {
-    let technology_name = path.split('/').pop().split('.')[0]
-    technology_name = technology_name.split('-')[1]
+    let technology_name =
+        path.split('/').pop().split('.')[0].split('-')[1]
 
-    // const import_string =
-        // `${base}${path}?component`
-        // `.././img/icon/technology/icon-${technology_name}.svg?component`
-    // console.log('svelte/src/lib/img/icon/technology/' + technology_name + '.svg?component' + '\n' + '$lib/img/icon/technology/'+technology_name+'.svg?component' + '\n')
     technologies_promisses[technology_name] =
-        // import(/* @vite-ignore */import_string)
-        // import(/* @vite-ignore */`${base}${path}?component`)
-        // import(/* @vite-ignore */base + path + '?component')
-        // import(/* @vite-ignore */'$lib/img/icon/technology/'+technology_name+'.svg?component')
-        // import(/* @vite-ignore */'$lib/img/icon/technology/python.svg?component')
         import(`.././img/icon/technology/icon-${technology_name}.svg?component`)
 }
