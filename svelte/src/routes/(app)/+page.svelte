@@ -28,7 +28,7 @@
             </div>
         </div>
     </div>
-    <button on:click={e => {clear_storage(); load_articles(); location.reload()}} class="btn btn-secondary w-min px-8 text-lg whitespace-nowrap col-span-full ml-auto mt-auto">Reload</button>
+    <button on:click={e => {clear_storage(); /**load_articles()*/; location.reload()}} class="btn btn-secondary w-min px-8 text-lg whitespace-nowrap col-span-full ml-auto mt-auto">Reload</button>
 </div>
 
 <script>
@@ -80,6 +80,7 @@ let localArticle1
 let localArticle2
 
 onMount(() => {
+    // clear_storage();
     localArticle1 = sessionStorage.getItem('article_1')
     localArticle2 = sessionStorage.getItem('article_2')
     load_articles();
