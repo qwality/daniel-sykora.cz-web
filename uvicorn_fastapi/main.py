@@ -87,13 +87,21 @@ async def rohlik_alt_login(request: Request, id: int, pin: int) -> JSONResponse:
         cp_courier_id = next(filter(lambda cookie: cookie['name'] == 'cp_courier_id',cookies), None)
         cp_courier_hash = next(filter(lambda cookie: cookie['name'] == 'cp_courier_hash',cookies), None)
 
-        return JSONResponse(
-            content={
-                'cp_courier_id': cp_courier_id,
-                'cp_courier_hash': cp_courier_hash
-            },
-            status_code=200
-        )
+        if cp_courier_id and cp_courier_hash:
+            return JSONResponse(
+                content={
+                    'cp_courier_id': cp_courier_id['value'],
+                    'cp_courier_hash': cp_courier_hash['value']
+                },
+                status_code=200
+            )
+        else:
+            return JSONResponse(
+                content={
+                    'error': 'no cookies found'
+                },
+                status_code=404
+            )
         
 @app.get('/{path:path}')
 async def catch_other(request: Request, path: str):
