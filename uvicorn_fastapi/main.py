@@ -84,8 +84,8 @@ async def rohlik_alt_login(request: Request, id: int, pin: int) -> JSONResponse:
 
         cookies = await context.cookies()
 
-        cp_courier_id = next(filter(lambda cookie: cookie['name'] == 'cp_courier_id',cookies))
-        cp_courier_hash = next(filter(lambda cookie: cookie['name'] == 'cp_courier_hash',cookies))
+        cp_courier_id = next(filter(lambda cookie: cookie['name'] == 'cp_courier_id',cookies), None)
+        cp_courier_hash = next(filter(lambda cookie: cookie['name'] == 'cp_courier_hash',cookies), None)
 
         return JSONResponse(
             content={
