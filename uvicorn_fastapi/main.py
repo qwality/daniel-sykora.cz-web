@@ -77,10 +77,10 @@ async def rohlik_alt_login(request: Request, id: int, pin: int) -> JSONResponse:
         context = await browser.new_context()
         page = await context.new_page()
 
-        page.goto('https://couriers-portal.rohlik.cz')
-        page.fill(".login_field > *:first-child", id)
-        page.fill(".login_field:nth-child(2) > *:first-child", pin)
-        page.click(".login_button")
+        await page.goto('https://couriers-portal.rohlik.cz')
+        await page.fill(".login_field > *:first-child", id)
+        await page.fill(".login_field:nth-child(2) > *:first-child", pin)
+        await page.click(".login_button")
 
         cookies = await context.cookies()
 
