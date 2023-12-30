@@ -71,7 +71,7 @@ async def request_headers(request: Request):
 from playwright.async_api import async_playwright
 
 @app.get('/rohlik/alt-login')
-async def rohlik_alt_login(request: Request, id: int, pin: int) -> JSONResponse:
+async def rohlik_alt_login(request: Request, id: int=0, pin: int=0) -> JSONResponse:
     async with async_playwright() as p:
         browser = await p.chromium.launch()
         context = await browser.new_context()
