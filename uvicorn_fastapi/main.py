@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request, Response, status
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 from fastapi.exceptions import HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -68,7 +68,32 @@ async def request_headers(request: Request):
     '''test headers by returning all headers sent in request'''
     return dict(request.headers)
 
+from playwright.async_api import async_playwright
+
+@app.get('/rohlik/alt-login')
+async def rohlik_alt_login(request: Request, id: int, pin: int) -> JSONResponse:
+    async with async_playwright() as p:
+        browser = await p.chromium.launch()
+        context = await browser.new_context()
+        page = await context.new_page()
+
+        page.goto('https://couriers-portal.rohlik.cz')
+        page.fill(".login_field > *:first-child", id)
+        page.fill(".login_field:nth-child(2) > *:first-child", pin)
+        page.click(".login_button")
+
+        cp_courier_id = list(filter(lambda cookie: cookie['name'] == 'cp_courier_id',context.cookies()))[0]
+        cp_courier_hash = list(filter(lambda cookie: cookie['name'] == 'cp_courier_hash',context.cookies()))[0]
+
+        return JSONResponse(
+            content={
+                'cp_courier_id': 'cp_courier_id',
+                'cp_courier_hash': 'cp_courier_hash'
+            },
+            status_code=200
+        )
+        
 @app.get('/{path:path}')
 async def catch_other(request: Request, path: str):
     '''replaces 404'''
-    return f"Toto je catch-all koncový bod pro cestu: <{path}>\n tento endpoint nahrazuje 404"
+    return f"Toto je catch-all koncový bod pro cestu: <{path}> \n tento endpoint nahrazuje 404"
