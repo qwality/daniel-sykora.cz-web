@@ -7,7 +7,7 @@ export let technologies = {
     'vue': 4,
     'html': 2,
     'css': 3,
-    'tailwindcss': 3,
+    'tailwindcss': 2,
     'jwt': 5,
     'elixir': 5,
     'svelte': 4,
@@ -24,6 +24,9 @@ export let technologies = {
     'vite': 5,
     'nuxt': 4,
     'daisyui': 3,
+    'jquery': 3,
+    'bootstrap': 4,
+    'skeleton': 5,
     'graphql': 5,
 }
 
