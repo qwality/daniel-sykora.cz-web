@@ -1,0 +1,21 @@
+servers:
+  this:
+    commands:
+      update: "git stash && git pull && nvm use 18"
+  nodejs:
+    commands:
+      setup: "npm --prefix ./nodejs install express"
+      run: "node nodejs/app.js &"
+      stop: "kill -9 $(lsof -i:6000 -t)"
+  uvicorn_fastapi:
+    commands:
+      run: "uvicorn uvicorn_fastapi.main:app --host 0.0.0.0 --port 8000 &"
+      stop: "kill -9 $(lsof -i:8000 -t)"
+  vite:
+    commands:
+      run: "npm --prefix ./vite_vue i && npm --prefix ./vite_vue run build &"
+      stop: "echo 'no stop command'"
+  svelte:
+    commands:
+      run: "npm --prefix ./svelte i && npm --prefix ./svelte run build && node svelte/build &"
+      stop: "kill -9 $(lsof -i:3000 -t)"
