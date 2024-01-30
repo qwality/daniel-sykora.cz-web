@@ -2,6 +2,7 @@ servers:
   this:
     commands:
       update: "git stash && git pull && nvm use 18"
+      status: "lsof -i:3000 -i:6000 -i:8000"
   nodejs:
     commands:
       setup: "npm --prefix ./nodejs install express"
